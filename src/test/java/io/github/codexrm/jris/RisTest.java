@@ -3,6 +3,8 @@ package io.github.codexrm.jris;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -75,15 +77,16 @@ class RisTest {
     Assertions.assertEquals(5, manager.getListReference().size());
 
     try {
-      manager.exportListReference("test\\export.txt");
-      Reader readerExport = new FileReader("test\\export.txt");
+      Path pathExportListReference = Paths.get("testFile", "export.txt");
+      manager.exportListReference(pathExportListReference.toString());
+      Reader readerExport = new FileReader(pathExportListReference.toString());
 
       ArrayList<RisEntry> listExport = manager.importReferences(readerExport);
 
       Assertions.assertEquals(5, listExport.size());
 
-
-      Reader reader = new FileReader("test\\importRis.txt");
+      Path pathImportListReference = Paths.get("testFile", "importRis.txt");
+      Reader reader = new FileReader(pathImportListReference.toString());
 
       ArrayList<RisEntry> list = manager.importReferences(reader);
       
