@@ -9,47 +9,47 @@ import java.util.ArrayList;
 
 public class RisManager {
 
-  private final ArrayList<RisEntry> listReference;
-  private Export exportRis;
-  private Import importRis;
+    private final ArrayList<RisEntry> listReference;
+    private Export exportRis;
+    private Import importRis;
 
-  public RisManager() {
-    super();
-    listReference = new ArrayList<>();
-    exportRis = new Export();
-    importRis = new Import();
-  }
+    public RisManager() {
+        super();
+        listReference = new ArrayList<>();
+        exportRis = new Export();
+        importRis = new Import();
+    }
 
-  public ArrayList<RisEntry> getListReference() {
-    return listReference;
-  }
+    public ArrayList<RisEntry> getListReference() {
+        return listReference;
+    }
 
-  public void addReference(RisEntry reference) {
-    listReference.add(reference);
-  }
+    public void addReference(RisEntry reference) {
+        listReference.add(reference);
+    }
 
-  public Export getExportRis() {
-    return exportRis;
-  }
+    public Export getExportRis() {
+        return exportRis;
+    }
 
-  public void setExportRis(Export exportRis) {
-    this.exportRis = exportRis;
-  }
+    public void setExportRis(Export exportRis) {
+        this.exportRis = exportRis;
+    }
 
-  public Import getImportRis() {
-    return importRis;
-  }
+    public Import getImportRis() {
+        return importRis;
+    }
 
-  public void setImportRis(Import importRis) {
-    this.importRis = importRis;
-  }
+    public void setImportRis(Import importRis) {
+        this.importRis = importRis;
+    }
 
-  public void exportListReference(String path) throws IOException {
-    Writer writer = new FileWriter(path);
-    exportRis.writeValue(listReference, writer);
-  }
+    public void exportListReference(String path) throws IOException {
+        Writer writer = new FileWriter(path);
+        exportRis.writeValue(listReference, writer);
+    }
 
-  public ArrayList<RisEntry> importReferences(Reader reader) throws IOException {
-    return importRis.readReader(reader);
-  }
+    public ArrayList<RisEntry> importReferences(Reader reader) throws IOException {
+        return importRis.readReader(reader);
+    }
 }

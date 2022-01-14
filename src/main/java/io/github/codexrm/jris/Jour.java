@@ -2,44 +2,44 @@ package io.github.codexrm.jris;
 
 public class Jour extends RisEntry {
 
-  private String jo;
-  private String vl;
-  private String is;
-  private String sp;
+    private String jo;
+    private String vl;
+    private String is;
+    private String sp;
 
-  public Jour() {
-    super();
-  }
-  
-  public String getJo() {
-    return jo;
-  }
+    public Jour() {
+        super();
+    }
 
-  public void setJo(String jo) {
-    this.jo = jo;
-  }
+    public String getJo() {
+        return jo;
+    }
 
-  public String getVl() {
-    return vl;
-  }
+    public void setJo(String jo) {
+        this.jo = jo;
+    }
 
-  public void setVl(String vl) {
-    this.vl = vl;
-  }
+    public String getVl() {
+        return vl;
+    }
 
-  public String getIs() {
-    return is;
-  }
+    public void setVl(String vl) {
+        this.vl = vl;
+    }
 
-  public void setIs(String is) {
-    this.is = is;
-  }
+    public String getIs() {
+        return is;
+    }
 
-  public String getSp() {
-    return sp;
-  }
+    public void setIs(String is) {
+        this.is = is;
+    }
 
-  public void setSp(String sp) {
-    this.sp = sp;
-  }
+    public String getSp() {
+        return sp;
+    }
+
+    public void setSp(String sp) {
+        this.sp = sp;
+    }
 }
