@@ -47,24 +47,24 @@ public class Export {
     private void commonField(RisEntry reference, BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.newLine();
-        if (reference.getAu() != null) {
-            bufferedWriter.write("AU  - " + reference.getAu());
+        if (reference.getAuthor() != null) {
+            bufferedWriter.write("AU  - " + reference.getAuthor());
             bufferedWriter.newLine();
         }
-        if (reference.getA2() != null) {
-            bufferedWriter.write("A2  - " + reference.getA2());
+        if (reference.getAuthor2() != null) {
+            bufferedWriter.write("A2  - " + reference.getAuthor2());
             bufferedWriter.newLine();
         }
-        if (reference.getA3() != null) {
-            bufferedWriter.write("A3  - " + reference.getA3());
+        if (reference.getAuthor3() != null) {
+            bufferedWriter.write("A3  - " + reference.getAuthor3());
             bufferedWriter.newLine();
         }
-        if (reference.getA4() != null) {
-            bufferedWriter.write("A4  - " + reference.getA4());
+        if (reference.getAuthor4() != null) {
+            bufferedWriter.write("A4  - " + reference.getAuthor4());
             bufferedWriter.newLine();
         }
-        if (reference.getTi() != null) {
-            bufferedWriter.write("TI  - " + reference.getTi());
+        if (reference.getTitle() != null) {
+            bufferedWriter.write("TI  - " + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.da != null) {
@@ -76,8 +76,8 @@ public class Export {
             }
             bufferedWriter.newLine();
         }
-        if (reference.getN1() != null) {
-            bufferedWriter.write("N1  - " + reference.getN1());
+        if (reference.getNotes() != null) {
+            bufferedWriter.write("N1  - " + reference.getNotes());
             bufferedWriter.newLine();
         }
     }
@@ -97,20 +97,20 @@ public class Export {
         bufferedWriter.write("TY  - JOUR");
         commonField(reference, bufferedWriter);
 
-        if (reference.getJo() != null) {
-            bufferedWriter.write("JO  - " + reference.getJo());
+        if (reference.getJournal() != null) {
+            bufferedWriter.write("JO  - " + reference.getJournal());
             bufferedWriter.newLine();
         }
-        if (reference.getVl() != null) {
-            bufferedWriter.write("VL  - " + reference.getVl());
+        if (reference.getVolume() != null) {
+            bufferedWriter.write("VL  - " + reference.getVolume());
             bufferedWriter.newLine();
         }
-        if (reference.getIs() != null) {
-            bufferedWriter.write("IS  - " + reference.getIs());
+        if (reference.getNumber() != null) {
+            bufferedWriter.write("IS  - " + reference.getNumber());
             bufferedWriter.newLine();
         }
-        if (reference.getSp() != null) {
-            bufferedWriter.write("SP  - " + reference.getSp());
+        if (reference.getPages() != null) {
+            bufferedWriter.write("SP  - " + reference.getPages());
         }
         closeReference(bufferedWriter);
     }
@@ -120,24 +120,24 @@ public class Export {
         bufferedWriter.write("TY  - BOOK");
         bufferedWriter.newLine();
 
-        if (reference.getPb() != null) {
-            bufferedWriter.write("PB  - " + reference.getPb());
+        if (reference.getPublisher() != null) {
+            bufferedWriter.write("PB  - " + reference.getPublisher());
             bufferedWriter.newLine();
         }
-        if (reference.getVl() != null) {
-            bufferedWriter.write("VL  - " + reference.getVl());
+        if (reference.getVolume() != null) {
+            bufferedWriter.write("VL  - " + reference.getVolume());
             bufferedWriter.newLine();
         }
-        if (reference.getAd() != null) {
-            bufferedWriter.write("AD  - " + reference.getAd());
+        if (reference.getAddress() != null) {
+            bufferedWriter.write("AD  - " + reference.getAddress());
             bufferedWriter.newLine();
         }
-        if (reference.getEt() != null) {
-            bufferedWriter.write("ET  - " + reference.getEt());
+        if (reference.getEdition() != null) {
+            bufferedWriter.write("ET  - " + reference.getEdition());
             bufferedWriter.newLine();
         }
-        if (reference.getT2() != null) {
-            bufferedWriter.write("T2  - " + reference.getT2());
+        if (reference.getSerie() != null) {
+            bufferedWriter.write("T2  - " + reference.getSerie());
         }
         closeReference(bufferedWriter);
     }
@@ -147,32 +147,32 @@ public class Export {
         bufferedWriter.write("TY  - SECC");
         bufferedWriter.newLine();
 
-        if (reference.getPb() != null) {
-            bufferedWriter.write("PB  - " + reference.getPb());
+        if (reference.getPublisher() != null) {
+            bufferedWriter.write("PB  - " + reference.getPublisher());
             bufferedWriter.newLine();
         }
-        if (reference.getVl() != null) {
-            bufferedWriter.write("VL  - " + reference.getVl());
+        if (reference.getVolume() != null) {
+            bufferedWriter.write("VL  - " + reference.getVolume());
             bufferedWriter.newLine();
         }
-        if (reference.getAd() != null) {
-            bufferedWriter.write("AD  - " + reference.getAd());
+        if (reference.getAddress() != null) {
+            bufferedWriter.write("AD  - " + reference.getAddress());
             bufferedWriter.newLine();
         }
-        if (reference.getEt() != null) {
-            bufferedWriter.write("ET  - " + reference.getEt());
+        if (reference.getEdition() != null) {
+            bufferedWriter.write("ET  - " + reference.getEdition());
             bufferedWriter.newLine();
         }
-        if (reference.getT3() != null) {
-            bufferedWriter.write("T3  - " + reference.getT3());
+        if (reference.getSerie() != null) {
+            bufferedWriter.write("T3  - " + reference.getSerie());
             bufferedWriter.newLine();
         }
-        if (reference.getEp() != null) {
-            bufferedWriter.write("EP  - " + reference.getEp());
+        if (reference.getChapter() != null) {
+            bufferedWriter.write("EP  - " + reference.getChapter());
             bufferedWriter.newLine();
         }
-        if (reference.getSp() != null) {
-            bufferedWriter.write("SP  - " + reference.getSp());
+        if (reference.getPages() != null) {
+            bufferedWriter.write("SP  - " + reference.getPages());
         }
         closeReference(bufferedWriter);
     }
@@ -182,16 +182,16 @@ public class Export {
         bufferedWriter.write("TY  - THES");
         commonField(reference, bufferedWriter);
 
-        if (reference.getPb() != null) {
-            bufferedWriter.write("PB  - " + reference.getPb());
+        if (reference.getUniversity() != null) {
+            bufferedWriter.write("PB  - " + reference.getUniversity());
             bufferedWriter.newLine();
         }
-        if (reference.getM3() != null) {
-            bufferedWriter.write("M3  - " + reference.getM3());
+        if (reference.getThesisType() != null) {
+            bufferedWriter.write("M3  - " + reference.getThesisType());
             bufferedWriter.newLine();
         }
-        if (reference.getAd() != null) {
-            bufferedWriter.write("AD  - " + reference.getAd());
+        if (reference.getAddress() != null) {
+            bufferedWriter.write("AD  - " + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }
@@ -201,16 +201,16 @@ public class Export {
         bufferedWriter.write("TY  - CONF");
         commonField(reference, bufferedWriter);
 
-        if (reference.getVl() != null) {
-            bufferedWriter.write("VL  - " + reference.getVl());
+        if (reference.getVolume() != null) {
+            bufferedWriter.write("VL  - " + reference.getVolume());
             bufferedWriter.newLine();
         }
-        if (reference.getT3() != null) {
-            bufferedWriter.write("T3  - " + reference.getT3());
+        if (reference.getSerie() != null) {
+            bufferedWriter.write("T3  - " + reference.getSerie());
             bufferedWriter.newLine();
         }
-        if (reference.getAd() != null) {
-            bufferedWriter.write("AD  - " + reference.getAd());
+        if (reference.getAddress() != null) {
+            bufferedWriter.write("AD  - " + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }

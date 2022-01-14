@@ -10,27 +10,27 @@ public class Conf extends RisEntry {
         super();
     }
 
-    public String getVl() {
+    public String getVolume() {
         return vl;
     }
 
-    public void setVl(String vl) {
+    public void setVolume(String vl) {
         this.vl = vl;
     }
 
-    public String getT3() {
+    public String getSerie() {
         return t3;
     }
 
-    public void setT3(String t3) {
+    public void setSerie(String t3) {
         this.t3 = t3;
     }
 
-    public String getAd() {
+    public String getAddress() {
         return ad;
     }
 
-    public void setAd(String ad) {
+    public void setAddress(String ad) {
         this.ad = ad;
     }
 }

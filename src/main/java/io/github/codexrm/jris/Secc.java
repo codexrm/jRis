@@ -14,59 +14,59 @@ public class Secc extends RisEntry {
         super();
     }
 
-    public String getEp() {
+    public String getChapter() {
         return ep;
     }
 
-    public void setEp(String ep) {
+    public void setChapter(String ep) {
         this.ep = ep;
     }
 
-    public String getSp() {
+    public String getPages() {
         return sp;
     }
 
-    public void setSp(String sp) {
+    public void setPages(String sp) {
         this.sp = sp;
     }
 
-    public String getT3() {
+    public String getSerie() {
         return t3;
     }
 
-    public void setT3(String t3) {
+    public void setSerie(String t3) {
         this.t3 = t3;
     }
 
-    public String getPb() {
+    public String getPublisher() {
         return pb;
     }
 
-    public void setPb(String pb) {
+    public void setPublisher(String pb) {
         this.pb = pb;
     }
 
-    public String getVl() {
+    public String getVolume() {
         return vl;
     }
 
-    public void setVl(String vl) {
+    public void setVolume(String vl) {
         this.vl = vl;
     }
 
-    public String getAd() {
+    public String getAddress() {
         return ad;
     }
 
-    public void setAd(String ad) {
+    public void setAddress(String ad) {
         this.ad = ad;
     }
 
-    public String getEt() {
+    public String getEdition() {
         return et;
     }
 
-    public void setEt(String et) {
+    public void setEdition(String et) {
         this.et = et;
     }
 }

@@ -11,35 +11,35 @@ public class Jour extends RisEntry {
         super();
     }
 
-    public String getJo() {
+    public String getJournal() {
         return jo;
     }
 
-    public void setJo(String jo) {
+    public void setJournal(String jo) {
         this.jo = jo;
     }
 
-    public String getVl() {
+    public String getVolume() {
         return vl;
     }
 
-    public void setVl(String vl) {
+    public void setVolume(String vl) {
         this.vl = vl;
     }
 
-    public String getIs() {
+    public String getNumber() {
         return is;
     }
 
-    public void setIs(String is) {
+    public void setNumber(String is) {
         this.is = is;
     }
 
-    public String getSp() {
+    public String getPages() {
         return sp;
     }
 
-    public void setSp(String sp) {
+    public void setPages(String sp) {
         this.sp = sp;
     }
 }

@@ -92,28 +92,28 @@ public class Import {
     private void commonField(String field, String content, RisEntry reference) {
         switch (field) {
             case "AU":
-                reference.setAu(content);
+                reference.setAuthor(content);
                 break;
             case "A2":
-                reference.setA2(content);
+                reference.setAuthor2(content);
                 break;
             case "A3":
-                reference.setA3(content);
+                reference.setAuthor3(content);
                 break;
             case "A4":
-                reference.setA4(content);
+                reference.setAuthor4(content);
                 break;
             case "TI":
-                reference.setTi(content);
+                reference.setTitle(content);
                 break;
             case "PY":
-                reference.setDa(content);
+                reference.setDate(content);
                 break;
             case "DA":
-                reference.setDa(content);
+                reference.setDate(content);
                 break;
             default:
-                reference.setN1(content);
+                reference.setNotes(content);
         }
     }
 
@@ -136,16 +136,16 @@ public class Import {
                     commonField(field, content, article);
                     break;
                 case "JO":
-                    article.setJo(content);
+                    article.setJournal(content);
                     break;
                 case "VL":
-                    article.setVl(content);
+                    article.setVolume(content);
                     break;
                 case "IS":
-                    article.setIs(content);
+                    article.setNumber(content);
                     break;
                 case "SP":
-                    article.setSp(content);
+                    article.setPages(content);
                     break;
                 default:
             }
@@ -172,19 +172,19 @@ public class Import {
                     commonField(field, content, book);
                     break;
                 case "PB":
-                    book.setPb(content);
+                    book.setPublisher(content);
                     break;
                 case "VL":
-                    book.setVl(content);
+                    book.setVolume(content);
                     break;
                 case "T2":
-                    book.setT2(content);
+                    book.setSerie(content);
                     break;
                 case "AD":
-                    book.setAd(content);
+                    book.setAddress(content);
                     break;
                 case "ET":
-                    book.setEt(content);
+                    book.setEdition(content);
                     break;
                 default:
             }
@@ -211,25 +211,25 @@ public class Import {
                     commonField(field, content, section);
                     break;
                 case "PB":
-                    section.setPb(content);
+                    section.setPublisher(content);
                     break;
                 case "VL":
-                    section.setVl(content);
+                    section.setVolume(content);
                     break;
                 case "T3":
-                    section.setT3(content);
+                    section.setSerie(content);
                     break;
                 case "AD":
-                    section.setAd(content);
+                    section.setAddress(content);
                     break;
                 case "ET":
-                    section.setEt(content);
+                    section.setEdition(content);
                     break;
                 case "EP":
-                    section.setEp(content);
+                    section.setChapter(content);
                     break;
                 case "SP":
-                    section.setSp(content);
+                    section.setPages(content);
                     break;
                 default:
             }
@@ -255,13 +255,13 @@ public class Import {
                     commonField(field, content, thesis);
                     break;
                 case "PB":
-                    thesis.setPb(content);
+                    thesis.setUniversity(content);
                     break;
                 case "M3":
-                    thesis.setM3(content);
+                    thesis.setThesisType(content);
                     break;
                 case "AD":
-                    thesis.setAd(content);
+                    thesis.setAddress(content);
                     break;
                 default:
             }
@@ -287,13 +287,13 @@ public class Import {
                     commonField(field, content, proceedings);
                     break;
                 case "VL":
-                    proceedings.setVl(content);
+                    proceedings.setVolume(content);
                     break;
                 case "T3":
-                    proceedings.setT3(content);
+                    proceedings.setSerie(content);
                     break;
                 case "AD":
-                    proceedings.setAd(content);
+                    proceedings.setAddress(content);
                     break;
                 default:
             }

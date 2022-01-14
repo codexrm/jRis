@@ -10,27 +10,27 @@ public class Thes extends RisEntry {
         super();
     }
 
-    public String getPb() {
+    public String getUniversity() {
         return pb;
     }
 
-    public void setPb(String pb) {
+    public void setUniversity(String pb) {
         this.pb = pb;
     }
 
-    public String getM3() {
+    public String getThesisType() {
         return m3;
     }
 
-    public void setM3(String m3) {
+    public void setThesisType(String m3) {
         this.m3 = m3;
     }
 
-    public String getAd() {
+    public String getAddress() {
         return ad;
     }
 
-    public void setAd(String ad) {
+    public void setAddress(String ad) {
         this.ad = ad;
     }
 }

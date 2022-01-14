@@ -12,43 +12,43 @@ public class Book extends RisEntry {
         super();
     }
 
-    public String getPb() {
+    public String getPublisher() {
         return pb;
     }
 
-    public void setPb(String pb) {
+    public void setPublisher(String pb) {
         this.pb = pb;
     }
 
-    public String getVl() {
+    public String getVolume() {
         return vl;
     }
 
-    public void setVl(String vl) {
+    public void setVolume(String vl) {
         this.vl = vl;
     }
 
-    public String getT2() {
+    public String getSerie() {
         return t2;
     }
 
-    public void setT2(String t2) {
+    public void setSerie(String t2) {
         this.t2 = t2;
     }
 
-    public String getAd() {
+    public String getAddress() {
         return ad;
     }
 
-    public void setAd(String ad) {
+    public void setAddress(String ad) {
         this.ad = ad;
     }
 
-    public String getEt() {
+    public String getEdition() {
         return et;
     }
 
-    public void setEt(String et) {
+    public void setEdition(String et) {
         this.et = et;
     }
 }

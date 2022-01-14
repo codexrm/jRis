@@ -49,7 +49,7 @@ public class RisManager {
         exportRis.writeValue(listReference, writer);
     }
 
-    public ArrayList<RisEntry> importReferences(Reader reader) throws IOException {
+    public ArrayList<RisEntry> importReferences( Reader reader) throws IOException {
         return importRis.readReader(reader);
     }
 }

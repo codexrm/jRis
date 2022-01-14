@@ -14,67 +14,67 @@ public class RisEntry {
         super();
     }
 
-    public String getAu() {
+    public String getAuthor() {
         return au;
     }
 
-    public void setAu(String name, String lastName) {
+    public void setAuthor(String name, String lastName) {
         this.au = createAuthor(name, lastName);
     }
 
-    public void setAu(String author) {
+    public void setAuthor(String author) {
         this.au = author;
     }
 
-    public String getA2() {
+    public String getAuthor2() {
         return a2;
     }
 
-    public void setA2(String name, String lastName) {
+    public void setAuthor2(String name, String lastName) {
         this.a2 = createAuthor(name, lastName);
     }
 
-    public void setA2(String author) {
+    public void setAuthor2(String author) {
         this.a2 = author;
     }
 
-    public String getA3() {
+    public String getAuthor3() {
         return a3;
     }
 
-    public void setA3(String name, String lastName) {
+    public void setAuthor3(String name, String lastName) {
         this.a3 = createAuthor(name, lastName);
     }
 
-    public void setA3(String author) {
+    public void setAuthor3(String author) {
         this.a3 = author;
     }
 
-    public String getA4() {
+    public String getAuthor4() {
         return a4;
     }
 
-    public void setA4(String name, String lastName) {
+    public void setAuthor4(String name, String lastName) {
         this.a4 = createAuthor(name, lastName);
     }
 
-    public void setA4(String author) {
+    public void setAuthor4(String author) {
         this.a4 = author;
     }
 
-    public String getTi() {
+    public String getTitle() {
         return ti;
     }
 
-    public void setTi(String ti) {
+    public void setTitle(String ti) {
         this.ti = ti;
     }
 
-    public String getDa() {
+    public String getDate() {
         return da;
     }
 
-    public void setDa(String year, RisMonth month) {
+    public void setDate(String year, RisMonth month) {
         if (year != null && month != null) {
             this.da = getYear(year) + "/" + numberMonth(month);
         } else {
@@ -86,15 +86,15 @@ public class RisEntry {
         }
     }
 
-    public void setDa(String da) {
+    public void setDate(String da) {
         this.da = da;
     }
 
-    public String getN1() {
+    public String getNotes() {
         return n1;
     }
 
-    public void setN1(String n1) {
+    public void setNotes(String n1) {
         this.n1 = n1;
     }
 
