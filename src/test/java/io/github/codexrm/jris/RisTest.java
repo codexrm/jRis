@@ -12,11 +12,11 @@ import org.junit.jupiter.api.Test;
 
 class RisTest {
     private final RisManager manager = new RisManager();
-    Jour article = new Jour();
-    Book book = new Book();
-    Secc section = new Secc();
-    Thes thesis = new Thes();
-    Conf conference = new Conf();
+    private final Jour article = new Jour();
+    private final Book book = new Book();
+    private final Secc section = new Secc();
+    private final Thes thesis = new Thes();
+    private final Conf conference = new Conf();
 
     @Test
     void addReference() {
