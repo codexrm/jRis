@@ -18,11 +18,11 @@ public class RisEntry {
         return au;
     }
 
-    public void setAuthor(String name, String lastName) {
+    public void setAuthor(final String name, final String lastName) {
         this.au = createAuthor(name, lastName);
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(final String author) {
         this.au = author;
     }
 
@@ -30,11 +30,11 @@ public class RisEntry {
         return a2;
     }
 
-    public void setAuthor2(String name, String lastName) {
+    public void setAuthor2(final String name, final String lastName) {
         this.a2 = createAuthor(name, lastName);
     }
 
-    public void setAuthor2(String author) {
+    public void setAuthor2(final String author) {
         this.a2 = author;
     }
 
@@ -42,11 +42,11 @@ public class RisEntry {
         return a3;
     }
 
-    public void setAuthor3(String name, String lastName) {
+    public void setAuthor3(final String name, final String lastName) {
         this.a3 = createAuthor(name, lastName);
     }
 
-    public void setAuthor3(String author) {
+    public void setAuthor3(final String author) {
         this.a3 = author;
     }
 
@@ -54,11 +54,11 @@ public class RisEntry {
         return a4;
     }
 
-    public void setAuthor4(String name, String lastName) {
+    public void setAuthor4(final String name, final String lastName) {
         this.a4 = createAuthor(name, lastName);
     }
 
-    public void setAuthor4(String author) {
+    public void setAuthor4(final String author) {
         this.a4 = author;
     }
 
@@ -66,7 +66,7 @@ public class RisEntry {
         return ti;
     }
 
-    public void setTitle(String ti) {
+    public void setTitle(final String ti) {
         this.ti = ti;
     }
 
@@ -74,7 +74,7 @@ public class RisEntry {
         return da;
     }
 
-    public void setDate(String year, RisMonth month) {
+    public void setDate(final String year, final RisMonth month) {
         if (year != null && month != null) {
             this.da = getYear(year) + "/" + numberMonth(month);
         } else {
@@ -86,7 +86,7 @@ public class RisEntry {
         }
     }
 
-    public void setDate(String da) {
+    public void setDate(final String da) {
         this.da = da;
     }
 
@@ -94,12 +94,12 @@ public class RisEntry {
         return n1;
     }
 
-    public void setNotes(String n1) {
+    public void setNotes(final String n1) {
         this.n1 = n1;
     }
 
-    private String numberMonth(RisMonth month) {
-        String numberMonth;
+    private String numberMonth(final RisMonth month) {
+        final String numberMonth;
         switch (month) {
             case JANUARY:
                 numberMonth = "01";
@@ -140,7 +140,7 @@ public class RisEntry {
         return numberMonth;
     }
 
-    private String createAuthor(String name, String lastName) {
+    private String createAuthor(final String name, final String lastName) {
         String author = null;
         if (name != null && lastName != null) {
             author = lastName + "," + name;
@@ -150,7 +150,7 @@ public class RisEntry {
 
     private String getYear(String year) {
 
-        char[] charYear = year.toCharArray();
+        final char[] charYear = year.toCharArray();
         if (charYear.length == 1) {
             year = "000" + year;
         } else {

@@ -78,22 +78,22 @@ class RisTest {
         Assertions.assertEquals(5, manager.getListReference().size());
 
         try {
-            Path pathExportListReference = Paths.get("testFile", "export.txt");
+            final Path pathExportListReference = Paths.get("testFile", "export.txt");
             manager.exportListReference(pathExportListReference.toString());
-            Reader readerExport = new FileReader(pathExportListReference.toString());
+            final Reader readerExport = new FileReader(pathExportListReference.toString());
 
-            ArrayList<RisEntry> listExport = manager.importReferences(readerExport);
+            final ArrayList<RisEntry> listExport = manager.importReferences(readerExport);
 
             Assertions.assertEquals(5, listExport.size());
 
-            Path pathImportListReference = Paths.get("testFile", "importRis.txt");
-            Reader reader = new FileReader(pathImportListReference.toString());
+            final Path pathImportListReference = Paths.get("testFile", "importRis.txt");
+            final Reader reader = new FileReader(pathImportListReference.toString());
 
-            ArrayList<RisEntry> list = manager.importReferences(reader);
+            final ArrayList<RisEntry> list = manager.importReferences(reader);
 
             Assertions.assertEquals(5, list.size());
 
-        } catch (IOException e) {
+        } catch (final IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

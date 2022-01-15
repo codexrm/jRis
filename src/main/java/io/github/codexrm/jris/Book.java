@@ -16,7 +16,7 @@ public class Book extends RisEntry {
         return pb;
     }
 
-    public void setPublisher(String pb) {
+    public void setPublisher(final String pb) {
         this.pb = pb;
     }
 
@@ -24,7 +24,7 @@ public class Book extends RisEntry {
         return vl;
     }
 
-    public void setVolume(String vl) {
+    public void setVolume(final String vl) {
         this.vl = vl;
     }
 
@@ -32,7 +32,7 @@ public class Book extends RisEntry {
         return t2;
     }
 
-    public void setSerie(String t2) {
+    public void setSerie(final String t2) {
         this.t2 = t2;
     }
 
@@ -40,7 +40,7 @@ public class Book extends RisEntry {
         return ad;
     }
 
-    public void setAddress(String ad) {
+    public void setAddress(final String ad) {
         this.ad = ad;
     }
 
@@ -48,7 +48,7 @@ public class Book extends RisEntry {
         return et;
     }
 
-    public void setEdition(String et) {
+    public void setEdition(final String et) {
         this.et = et;
     }
 }

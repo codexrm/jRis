@@ -13,17 +13,17 @@ public class Import {
         // Do nothing
     }
 
-    public ArrayList<RisEntry> readReader(Reader reader) throws IOException {
+    public ArrayList<RisEntry> readReader(final Reader reader) throws IOException {
 
-        ArrayList<RisEntry> listReference = new ArrayList<>();
-        ArrayList<String[]> listString = new ArrayList<>();
-        BufferedReader br = new BufferedReader(reader);
+        final ArrayList<RisEntry> listReference = new ArrayList<>();
+        final ArrayList<String[]> listString = new ArrayList<>();
+        final BufferedReader br = new BufferedReader(reader);
         String line;
 
         while ((line = br.readLine()) != null) {
             String[] partLine = validateExpression(line);
             if (partLine.length != 0) {
-                String field = partLine[0].trim();
+                final String field = partLine[0].trim();
                 if (field.equals("TY")) {
                     listString.add(partLine);
                     while (!line.equals("ER  - ")) {
@@ -33,7 +33,7 @@ public class Import {
                             listString.add(partLine);
                         }
                     }
-                    RisEntry reference = createReference(listString);
+                    final RisEntry reference = createReference(listString);
                     if (reference != null) {
                         listReference.add(reference);
                     }
@@ -45,9 +45,9 @@ public class Import {
         return listReference;
     }
 
-    private String[] validateExpression(String line) {
-        Pattern pat = Pattern.compile("^[A-Z][A-Z1-9]\\s\\s-\\s.*");
-        Matcher mat = pat.matcher(line);
+    private String[] validateExpression(final String line) {
+        final Pattern pat = Pattern.compile("^[A-Z][A-Z1-9]\\s\\s-\\s.*");
+        final Matcher mat = pat.matcher(line);
         if (mat.matches()) {
             return line.split("-", 2);
         } else {
@@ -56,14 +56,14 @@ public class Import {
         }
     }
 
-    private RisEntry createReference(ArrayList<String[]> listPartLine) {
+    private RisEntry createReference(final ArrayList<String[]> listPartLine) {
 
         String field = listPartLine.get(0)[0];
         String content = listPartLine.get(0)[1];
         field = field.trim();
         content = content.trim();
         if (field.equals("TY")) {
-            RisEntry reference;
+            final RisEntry reference;
             switch (content) {
                 case "JOUR":
                     reference = createJour(listPartLine);
@@ -89,7 +89,7 @@ public class Import {
         }
     }
 
-    private void commonField(String field, String content, RisEntry reference) {
+    private void commonField(final String field, final String content, final RisEntry reference) {
         switch (field) {
             case "AU":
                 reference.setAuthor(content);
@@ -117,11 +117,11 @@ public class Import {
         }
     }
 
-    private RisEntry createJour(ArrayList<String[]> listPartLine) {
-        Jour article = new Jour();
+    private RisEntry createJour(final ArrayList<String[]> listPartLine) {
+        final Jour article = new Jour();
         for (int i = 1; i < listPartLine.size() - 1; i++) {
             String field = listPartLine.get(i)[0];
-            String content = listPartLine.get(i)[1];
+            final String content = listPartLine.get(i)[1];
             field = field.trim();
 
             switch (field) {
@@ -153,11 +153,11 @@ public class Import {
         return article;
     }
 
-    private RisEntry createBook(ArrayList<String[]> listPartLine) {
-        Book book = new Book();
+    private RisEntry createBook(final ArrayList<String[]> listPartLine) {
+        final Book book = new Book();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            String content = listPartLine.get(i)[1];
+            final String content = listPartLine.get(i)[1];
             field = field.trim();
 
             switch (field) {
@@ -192,11 +192,11 @@ public class Import {
         return book;
     }
 
-    private RisEntry createSecc(ArrayList<String[]> listPartLine) {
-        Secc section = new Secc();
+    private RisEntry createSecc(final ArrayList<String[]> listPartLine) {
+        final Secc section = new Secc();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            String content = listPartLine.get(i)[1];
+            final String content = listPartLine.get(i)[1];
             field = field.trim();
 
             switch (field) {
@@ -237,11 +237,11 @@ public class Import {
         return section;
     }
 
-    private RisEntry createThes(ArrayList<String[]> listPartLine) {
-        Thes thesis = new Thes();
+    private RisEntry createThes(final ArrayList<String[]> listPartLine) {
+        final Thes thesis = new Thes();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            String content = listPartLine.get(i)[1];
+            final String content = listPartLine.get(i)[1];
             field = field.trim();
             switch (field) {
                 case "AU":
@@ -269,11 +269,11 @@ public class Import {
         return thesis;
     }
 
-    private RisEntry createConf(ArrayList<String[]> listPartLine) {
-        Conf proceedings = new Conf();
+    private RisEntry createConf(final ArrayList<String[]> listPartLine) {
+        final Conf proceedings = new Conf();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            String content = listPartLine.get(i)[1];
+            final String content = listPartLine.get(i)[1];
             field = field.trim();
             switch (field) {
                 case "AU":

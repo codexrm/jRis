@@ -11,16 +11,16 @@ public class Export {
         // Do nothing
     }
 
-    public void writeValue(ArrayList<RisEntry> listReference, Writer writer) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(writer);
+    public void writeValue(final ArrayList<RisEntry> listReference, final Writer writer) throws IOException {
+        final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
-        for (RisEntry entry : listReference) {
+        for (final RisEntry entry : listReference) {
             identifyType(entry, bufferedWriter);
         }
         closeFile(bufferedWriter);
     }
 
-    private void identifyType(RisEntry reference, BufferedWriter bufferedWriter) throws IOException {
+    private void identifyType(final RisEntry reference, final BufferedWriter bufferedWriter) throws IOException {
 
 
         if (reference instanceof Jour) {
@@ -44,7 +44,7 @@ public class Export {
         }
     }
 
-    private void commonField(RisEntry reference, BufferedWriter bufferedWriter) throws IOException {
+    private void commonField(final RisEntry reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.newLine();
         if (reference.getAuthor() != null) {
@@ -69,7 +69,7 @@ public class Export {
         }
         if (reference.da != null) {
             if (reference instanceof Secc) {
-                String[] da = reference.da.split("/");
+                final String[] da = reference.da.split("/");
                 bufferedWriter.write("PY  - " + da[0].strip());
             } else {
                 bufferedWriter.write("DA  - " + reference.da);
@@ -82,17 +82,17 @@ public class Export {
         }
     }
 
-    private void closeReference(BufferedWriter bufferedWriter) throws IOException {
+    private void closeReference(final BufferedWriter bufferedWriter) throws IOException {
         bufferedWriter.newLine();
         bufferedWriter.write("ER  - ");
         bufferedWriter.newLine();
     }
 
-    private void closeFile(BufferedWriter bufferedWriter) throws IOException {
+    private void closeFile(final BufferedWriter bufferedWriter) throws IOException {
         bufferedWriter.close();
     }
 
-    private void writeJour(Jour reference, BufferedWriter bufferedWriter) throws IOException {
+    private void writeJour(final Jour reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - JOUR");
         commonField(reference, bufferedWriter);
@@ -115,7 +115,7 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeBook(Book reference, BufferedWriter bufferedWriter) throws IOException {
+    private void writeBook(final Book reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - BOOK");
         bufferedWriter.newLine();
@@ -142,7 +142,7 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeSecc(Secc reference, BufferedWriter bufferedWriter) throws IOException {
+    private void writeSecc(final Secc reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - SECC");
         bufferedWriter.newLine();
@@ -177,7 +177,7 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeThes(Thes reference, BufferedWriter bufferedWriter) throws IOException {
+    private void writeThes(final Thes reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - THES");
         commonField(reference, bufferedWriter);
@@ -196,7 +196,7 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeConf(Conf reference, BufferedWriter bufferedWriter) throws IOException {
+    private void writeConf(final Conf reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - CONF");
         commonField(reference, bufferedWriter);

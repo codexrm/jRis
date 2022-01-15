@@ -24,7 +24,7 @@ public class RisManager {
         return listReference;
     }
 
-    public void addReference(RisEntry reference) {
+    public void addReference(final RisEntry reference) {
         listReference.add(reference);
     }
 
@@ -32,7 +32,7 @@ public class RisManager {
         return exportRis;
     }
 
-    public void setExportRis(Export exportRis) {
+    public void setExportRis(final Export exportRis) {
         this.exportRis = exportRis;
     }
 
@@ -40,16 +40,16 @@ public class RisManager {
         return importRis;
     }
 
-    public void setImportRis(Import importRis) {
+    public void setImportRis(final Import importRis) {
         this.importRis = importRis;
     }
 
-    public void exportListReference(String path) throws IOException {
-        Writer writer = new FileWriter(path);
+    public void exportListReference(final String path) throws IOException {
+        final Writer writer = new FileWriter(path);
         exportRis.writeValue(listReference, writer);
     }
 
-    public ArrayList<RisEntry> importReferences( Reader reader) throws IOException {
+    public ArrayList<RisEntry> importReferences(final Reader reader) throws IOException {
         return importRis.readReader(reader);
     }
 }

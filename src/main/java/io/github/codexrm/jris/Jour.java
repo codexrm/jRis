@@ -15,7 +15,7 @@ public class Jour extends RisEntry {
         return jo;
     }
 
-    public void setJournal(String jo) {
+    public void setJournal(final String jo) {
         this.jo = jo;
     }
 
@@ -23,7 +23,7 @@ public class Jour extends RisEntry {
         return vl;
     }
 
-    public void setVolume(String vl) {
+    public void setVolume(final String vl) {
         this.vl = vl;
     }
 
@@ -31,7 +31,7 @@ public class Jour extends RisEntry {
         return is;
     }
 
-    public void setNumber(String is) {
+    public void setNumber(final String is) {
         this.is = is;
     }
 
@@ -39,7 +39,7 @@ public class Jour extends RisEntry {
         return sp;
     }
 
-    public void setPages(String sp) {
+    public void setPages(final String sp) {
         this.sp = sp;
     }
 }

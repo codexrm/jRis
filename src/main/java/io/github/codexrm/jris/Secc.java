@@ -18,7 +18,7 @@ public class Secc extends RisEntry {
         return ep;
     }
 
-    public void setChapter(String ep) {
+    public void setChapter(final String ep) {
         this.ep = ep;
     }
 
@@ -26,7 +26,7 @@ public class Secc extends RisEntry {
         return sp;
     }
 
-    public void setPages(String sp) {
+    public void setPages(final String sp) {
         this.sp = sp;
     }
 
@@ -34,7 +34,7 @@ public class Secc extends RisEntry {
         return t3;
     }
 
-    public void setSerie(String t3) {
+    public void setSerie(final String t3) {
         this.t3 = t3;
     }
 
@@ -42,7 +42,7 @@ public class Secc extends RisEntry {
         return pb;
     }
 
-    public void setPublisher(String pb) {
+    public void setPublisher(final String pb) {
         this.pb = pb;
     }
 
@@ -50,7 +50,7 @@ public class Secc extends RisEntry {
         return vl;
     }
 
-    public void setVolume(String vl) {
+    public void setVolume(final String vl) {
         this.vl = vl;
     }
 
@@ -58,7 +58,7 @@ public class Secc extends RisEntry {
         return ad;
     }
 
-    public void setAddress(String ad) {
+    public void setAddress(final String ad) {
         this.ad = ad;
     }
 
@@ -66,7 +66,7 @@ public class Secc extends RisEntry {
         return et;
     }
 
-    public void setEdition(String et) {
+    public void setEdition(final String et) {
         this.et = et;
     }
 }

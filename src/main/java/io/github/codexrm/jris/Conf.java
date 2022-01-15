@@ -14,7 +14,7 @@ public class Conf extends RisEntry {
         return vl;
     }
 
-    public void setVolume(String vl) {
+    public void setVolume(final String vl) {
         this.vl = vl;
     }
 
@@ -22,7 +22,7 @@ public class Conf extends RisEntry {
         return t3;
     }
 
-    public void setSerie(String t3) {
+    public void setSerie(final String t3) {
         this.t3 = t3;
     }
 
@@ -30,7 +30,7 @@ public class Conf extends RisEntry {
         return ad;
     }
 
-    public void setAddress(String ad) {
+    public void setAddress(final String ad) {
         this.ad = ad;
     }
 }
