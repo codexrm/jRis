@@ -1,6 +1,8 @@
 package io.github.codexrm.jris;
 
 
+import lombok.NonNull;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
@@ -24,7 +26,7 @@ public class RisManager {
         return listReference;
     }
 
-    public void addReference(final RisEntry reference) {
+    public void addReference(@NonNull final RisEntry reference) {
         listReference.add(reference);
     }
 
@@ -44,12 +46,12 @@ public class RisManager {
         this.importRis = importRis;
     }
 
-    public void exportListReference(final String path) throws IOException {
+    public void exportListReference(@NonNull final String path) throws IOException {
         final Writer writer = new FileWriter(path);
         exportRis.writeValue(listReference, writer);
     }
 
-    public ArrayList<RisEntry> importReferences(final Reader reader) throws IOException {
+    public ArrayList<RisEntry> importReferences(@NonNull final Reader reader) throws IOException {
         return importRis.readReader(reader);
     }
 }
