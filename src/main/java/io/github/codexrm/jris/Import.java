@@ -107,8 +107,6 @@ public class Import {
                 reference.setTitle(content);
                 break;
             case "PY":
-                reference.setDate(content);
-                break;
             case "DA":
                 reference.setDate(content);
                 break;
