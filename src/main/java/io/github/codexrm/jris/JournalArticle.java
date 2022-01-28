@@ -1,12 +1,13 @@
 package io.github.codexrm.jris;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class JournalArticle extends BaseReference {
 
     private final ArrayList<String> listAuthor;
     private String title;
-    private String date;
+    private LocalDate date;
     private String journal;
     private String volume;
     private String number;
@@ -18,7 +19,9 @@ public class JournalArticle extends BaseReference {
         listAuthor = new ArrayList<>();
     }
 
-    public ArrayList<String> getListAuthor() {return listAuthor;}
+    public ArrayList<String> getListAuthor() {
+        return listAuthor;
+    }
 
     public void setAuthor(final String author) {
         this.listAuthor.add(author);
@@ -32,12 +35,12 @@ public class JournalArticle extends BaseReference {
         this.title = title;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(final String date) {
-        this.date = validateDate(date);
+    public void setDate(final LocalDate date) {
+        this.date = date;
     }
 
     public String getJournal() {

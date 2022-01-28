@@ -4,7 +4,7 @@ AU  - Nunnez,Roberto
 A2  - Montaner,Luis
 A3  - Alfonso,Jose
 TI  - The woman
-DA  - 0202/07
+DA  - 202/07
 N1  - nn
 VL  - vol.5
 T3  - 2x
@@ -13,7 +13,7 @@ ER  -
 TY  - GEN
 AU  - Torres-Nunnez,Roberto
 TI  - Photos
-DA  - 0020/11
+DA  - 20/11
 N1  - ee
 PB  - NO SE
 AD  - ave45,no76
@@ -21,7 +21,7 @@ ER  -
 TY  - THES
 AU  - Diaz-Nunnez,Marynes
 TI  - Reference
-DA  - 0008/01
+DA  - 8/01
 N1  - jj
 PB  - Fructuoso Rodriguez
 M3  - Masters

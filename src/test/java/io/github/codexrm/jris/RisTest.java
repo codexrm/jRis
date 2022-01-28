@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Assertions;
@@ -21,7 +22,7 @@ class RisTest {
     @Test
     void addReference() {
         article.setTitle("project of education");
-        article.setDate("2008/03");
+        article.setDate(LocalDate.of(2008, 3, 1));
         article.setNotes("aa");
         article.setJournal("Sciences and education");
         article.setVolume("vol132");
@@ -31,7 +32,7 @@ class RisTest {
         manager.addReference(article);
 
         book.setTitle("relations and your career");
-        book.setDate("1987/04");
+        book.setDate(LocalDate.of(1987, 4, 1));
         book.setNotes("bb");
         book.setAuthor("Navarro-Gener,Enrique");
         book.setEditor("Martin-Gonzalez,Jacob");
@@ -47,7 +48,7 @@ class RisTest {
         section.setEditor("Martin-Gonzalez,Jacob");
         section.setSeriesEditor("Fernadez-Diaz,Maria");
         section.setTitle("introduction to Windows");
-        section.setDate("2012");
+        section.setDate(LocalDate.of(2012, 1, 1));
         section.setNotes("cc");
         section.setPublisher("Education");
         section.setVolume("vol35");
@@ -60,7 +61,7 @@ class RisTest {
 
         thesis.setAuthor("Navarro-Gener,Enrique");
         thesis.setTitle("Reference");
-        thesis.setDate("2019/05");
+        thesis.setDate(LocalDate.of(2019, 5, 1));
         thesis.setNotes("dd");
         thesis.setSchool("Cespedes");
         thesis.setThesisType("phd");
@@ -71,7 +72,7 @@ class RisTest {
         conference.setEditor("Gil,Marcos");
         conference.setSeriesEditor("Navarro,Luis");
         conference.setTitle("The men");
-        conference.setDate("2020/08");
+        conference.setDate(LocalDate.of(2020, 8, 1));
         conference.setNotes("ee");
         conference.setVolume("vol34");
         conference.setSerie("x13");

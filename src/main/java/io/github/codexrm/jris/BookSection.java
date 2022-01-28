@@ -1,5 +1,6 @@
 package io.github.codexrm.jris;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class BookSection extends BaseReference {
@@ -8,7 +9,7 @@ public class BookSection extends BaseReference {
     private final ArrayList<String> listEditor;
     private final ArrayList<String> listSeriesEditor;
     private String title;
-    private String date;
+    private LocalDate date;
     private String chapter;
     private String pages;
     private String serie;
@@ -57,12 +58,12 @@ public class BookSection extends BaseReference {
         this.title = title;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(final String date) {
-        this.date = validateYear(date);
+    public void setDate(final LocalDate date) {
+        this.date = date;
     }
 
     public String getChapter() {

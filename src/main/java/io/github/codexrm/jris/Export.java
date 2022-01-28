@@ -99,7 +99,11 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
-            bufferedWriter.write(da + reference.getDate());
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write(da + reference.getDate().getYear());
+            }
             bufferedWriter.newLine();
         }
         if (reference.getJournal() != null) {
@@ -133,7 +137,11 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
-            bufferedWriter.write(da + reference.getDate());
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write(da + reference.getDate().getYear());
+            }
             bufferedWriter.newLine();
         }
         if (reference.getPublisher() != null) {
@@ -171,8 +179,7 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
-            final String[] fullDate = reference.getDate().split("/", 2);
-            bufferedWriter.write("PY  - " + fullDate[0].strip());
+            bufferedWriter.write("PY  - " + reference.getDate().getYear());
             bufferedWriter.newLine();
         }
         if (reference.getPublisher() != null) {
@@ -216,7 +223,11 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
-            bufferedWriter.write(da + reference.getDate());
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write(da + reference.getDate().getYear());
+            }
             bufferedWriter.newLine();
         }
         if (reference.getSchool() != null) {
@@ -246,7 +257,11 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
-            bufferedWriter.write(da + reference.getDate());
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write(da + reference.getDate().getYear());
+            }
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {

@@ -3,6 +3,8 @@ package io.github.codexrm.jris;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -54,6 +56,63 @@ public class Import {
 
             return new String[0];
         }
+    }
+
+    private boolean isNumero(final String numero) {
+        try {
+            Long.valueOf(numero);
+            return true;
+
+        } catch (final NumberFormatException e) {
+            return false;
+        }
+    }
+
+    private String validateYear(final String year) {
+        if (isNumero(year)) {
+            final char[] charYear = year.toCharArray();
+            switch (charYear.length) {
+                case 1:
+                    return "000" + year;
+                case 2:
+                    return "00" + year;
+                case 3:
+                    return "0" + year;
+                case 4:
+                    return year;
+                default:
+                    return null;
+            }
+        } else return null;
+    }
+
+    private String validateMonth(String month) {
+        if (isNumero(month)) {
+            final char[] charMonth = month.toCharArray();
+            if (charMonth.length == 1) {
+                month = "0" + month;
+            } else {
+                if (charMonth.length > 2) {
+                    return null;
+                }
+            }
+            return month;
+        } else return null;
+    }
+
+    private LocalDate establishDate(String importedDate) {
+
+        importedDate = importedDate.strip();
+        final String[] fullDate = importedDate.split("/", 2);
+        if (fullDate.length == 2) {
+            final String year = validateYear(fullDate[0]);
+            final String month = validateMonth(fullDate[1]);
+            importedDate = year + "/" + month + "/01";
+        } else if (fullDate.length == 1) {
+            final String year = validateYear(fullDate[0]);
+            importedDate = year + "/01/02";
+        }
+        return LocalDate.parse(importedDate, DateTimeFormatter.ofPattern("yyyy/MM/dd"));
     }
 
     private BaseReference createReference(final ArrayList<String[]> listPartLine) {
@@ -108,7 +167,7 @@ public class Import {
                     break;
                 case "PY":
                 case "DA":
-                    journal.setDate(content);
+                    journal.setDate(establishDate(content));
                     break;
                 case "N1":
                     journal.setNotes(content);
@@ -153,7 +212,7 @@ public class Import {
                     break;
                 case "PY":
                 case "DA":
-                    book.setDate(content);
+                    book.setDate(establishDate(content));
                     break;
                 case "N1":
                     book.setNotes(content);
@@ -200,7 +259,7 @@ public class Import {
                     section.setTitle(content);
                     break;
                 case "PY":
-                    section.setDate(content);
+                    section.setDate(establishDate(content));
                     break;
                 case "N1":
                     section.setNotes(content);
@@ -247,7 +306,7 @@ public class Import {
                     break;
                 case "PY":
                 case "DA":
-                    thesis.setDate(content);
+                    thesis.setDate(establishDate(content));
                     break;
                 case "N1":
                     thesis.setNotes(content);
@@ -288,7 +347,7 @@ public class Import {
                     break;
                 case "PY":
                 case "DA":
-                    proceedings.setDate(content);
+                    proceedings.setDate(establishDate(content));
                     break;
                 case "N1":
                     proceedings.setNotes(content);

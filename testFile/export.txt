@@ -2,7 +2,7 @@ TY  - JOUR
 N1  - aa
 AU  - Martin-Gonzalez,Jacob
 TI  - project of education
-DA  - 2008/03
+DA  - 2008
 T2  - Sciences and education
 VL  - vol132
 C7  - no3443
@@ -14,7 +14,7 @@ AU  - Navarro-Gener,Enrique
 A3  - Martin-Gonzalez,Jacob
 A2  - Diaz,Camilo
 TI  - relations and your career
-DA  - 1987/04
+DA  - 1987
 PB  - Prencite Hall
 VL  - vol35
 AD  - ave67 no02
@@ -40,7 +40,7 @@ TY  - THES
 N1  - dd
 AU  - Navarro-Gener,Enrique
 TI  - Reference
-DA  - 2019/05
+DA  - 2019
 PB  - Cespedes
 M3  - phd
 AD  - ave61
@@ -51,7 +51,7 @@ AU  - Nunnez,Roberto
 A2  - Gil,Marcos
 A3  - Navarro,Luis
 TI  - The men
-DA  - 2020/08
+DA  - 2020
 VL  - vol34
 T3  - x13
 AD  - ave76,no87

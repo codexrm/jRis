@@ -1,5 +1,6 @@
 package io.github.codexrm.jris;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ConferenceProceedings extends BaseReference {
@@ -8,7 +9,7 @@ public class ConferenceProceedings extends BaseReference {
     private final ArrayList<String> listEditor;
     private final ArrayList<String> listSeriesEditor;
     private String title;
-    private String date;
+    private LocalDate date;
     private String volume;
     private String serie;
     private String address;
@@ -52,12 +53,12 @@ public class ConferenceProceedings extends BaseReference {
         this.title = title;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(final String date) {
-        this.date = validateDate(date);
+    public void setDate(final LocalDate date) {
+        this.date = date;
     }
 
     public String getVolume() {
@@ -68,9 +69,13 @@ public class ConferenceProceedings extends BaseReference {
         this.volume = volume;
     }
 
-    public String getSerie() {return serie;}
+    public String getSerie() {
+        return serie;
+    }
 
-    public void setSerie(final String serie) {this.serie = serie;}
+    public void setSerie(final String serie) {
+        this.serie = serie;
+    }
 
     public String getAddress() {
         return address;
