@@ -2,21 +2,23 @@ package io.github.codexrm.jris;
 
 import java.util.ArrayList;
 
-public class Book extends BaseReference {
+public class BookSection extends BaseReference {
 
     private final ArrayList<String> listAuthor;
     private final ArrayList<String> listEditor;
     private final ArrayList<String> listSeriesEditor;
     private String title;
     private String date;
+    private String chapter;
+    private String pages;
+    private String serie;
     private String publisher;
     private String volume;
-    private String serie;
     private String address;
     private String edition;
 
 
-    public Book() {
+    public BookSection() {
         super();
         listAuthor = new ArrayList<>();
         listEditor = new ArrayList<>();
@@ -27,8 +29,8 @@ public class Book extends BaseReference {
         return listAuthor;
     }
 
-    public void setAuthor(final String Author) {
-        this.listAuthor.add(Author);
+    public void setAuthor(final String author) {
+        this.listAuthor.add(author);
     }
 
     public ArrayList<String> getListEditor() {
@@ -39,11 +41,11 @@ public class Book extends BaseReference {
         this.listEditor.add(editor);
     }
 
-    public ArrayList<String> getListSerieEditor() {
+    public ArrayList<String> getListSeriesEditor() {
         return listSeriesEditor;
     }
 
-    public void setSerieEditor(final String seriesEditor) {
+    public void setSeriesEditor(final String seriesEditor) {
         this.listSeriesEditor.add(seriesEditor);
     }
 
@@ -60,7 +62,31 @@ public class Book extends BaseReference {
     }
 
     public void setDate(final String date) {
-        this.date = validateDate(date);
+        this.date = validateYear(date);
+    }
+
+    public String getChapter() {
+        return chapter;
+    }
+
+    public void setChapter(final String chapter) {
+        this.chapter = chapter;
+    }
+
+    public String getPages() {
+        return pages;
+    }
+
+    public void setPages(final String pages) {
+        this.pages = pages;
+    }
+
+    public String getSerie() {
+        return serie;
+    }
+
+    public void setSerie(final String serie) {
+        this.serie = serie;
     }
 
     public String getPublisher() {
@@ -79,14 +105,6 @@ public class Book extends BaseReference {
         this.volume = volume;
     }
 
-    public String getSerie() {
-        return serie;
-    }
-
-    public void setSerie(final String serie) {
-        this.serie = serie;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -102,4 +120,6 @@ public class Book extends BaseReference {
     public void setEdition(final String edition) {
         this.edition = edition;
     }
+
+
 }

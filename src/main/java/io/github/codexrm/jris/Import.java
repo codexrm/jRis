@@ -13,9 +13,9 @@ public class Import {
         // Do nothing
     }
 
-    public ArrayList<RisEntry> readReader(final Reader reader) throws IOException {
+    public ArrayList<BaseReference> readReader(final Reader reader) throws IOException {
 
-        final ArrayList<RisEntry> listReference = new ArrayList<>();
+        final ArrayList<BaseReference> listReference = new ArrayList<>();
         final ArrayList<String[]> listString = new ArrayList<>();
         final BufferedReader br = new BufferedReader(reader);
         String line;
@@ -33,7 +33,7 @@ public class Import {
                             listString.add(partLine);
                         }
                     }
-                    final RisEntry reference = createReference(listString);
+                    final BaseReference reference = createReference(listString);
                     if (reference != null) {
                         listReference.add(reference);
                     }
@@ -56,29 +56,32 @@ public class Import {
         }
     }
 
-    private RisEntry createReference(final ArrayList<String[]> listPartLine) {
+    private BaseReference createReference(final ArrayList<String[]> listPartLine) {
 
         String field = listPartLine.get(0)[0];
         String content = listPartLine.get(0)[1];
         field = field.trim();
         content = content.trim();
         if (field.equals("TY")) {
-            final RisEntry reference;
+            final BaseReference reference;
             switch (content) {
+                case "ABST":
+                case "INPR":
+                case "JFULL":
                 case "JOUR":
-                    reference = createJour(listPartLine);
+                    reference = createJournal(listPartLine);
                     break;
                 case "BOOK":
                     reference = createBook(listPartLine);
                     break;
-                case "SECC":
-                    reference = createSecc(listPartLine);
+                case "CHAP":
+                    reference = createBookSection(listPartLine);
                     break;
                 case "THES":
-                    reference = createThes(listPartLine);
+                    reference = createThesis(listPartLine);
                     break;
                 case "CONF":
-                    reference = createConf(listPartLine);
+                    reference = createConferenceProceedings(listPartLine);
                     break;
                 default:
                     reference = null;
@@ -89,34 +92,8 @@ public class Import {
         }
     }
 
-    private void commonField(final String field, final String content, final RisEntry reference) {
-        switch (field) {
-            case "AU":
-                reference.setAuthor(content);
-                break;
-            case "A2":
-                reference.setAuthor2(content);
-                break;
-            case "A3":
-                reference.setAuthor3(content);
-                break;
-            case "A4":
-                reference.setAuthor4(content);
-                break;
-            case "TI":
-                reference.setTitle(content);
-                break;
-            case "PY":
-            case "DA":
-                reference.setDate(content);
-                break;
-            default:
-                reference.setNotes(content);
-        }
-    }
-
-    private RisEntry createJour(final ArrayList<String[]> listPartLine) {
-        final Jour article = new Jour();
+    private BaseReference createJournal(final ArrayList<String[]> listPartLine) {
+        final JournalArticle journal = new JournalArticle();
         for (int i = 1; i < listPartLine.size() - 1; i++) {
             String field = listPartLine.get(i)[0];
             final String content = listPartLine.get(i)[1];
@@ -124,34 +101,37 @@ public class Import {
 
             switch (field) {
                 case "AU":
-                case "A2":
-                case "A3":
-                case "A4":
+                    journal.setAuthor(content);
+                    break;
                 case "TI":
+                    journal.setTitle(content);
+                    break;
                 case "PY":
                 case "DA":
-                case "N1":
-                    commonField(field, content, article);
+                    journal.setDate(content);
                     break;
-                case "JO":
-                    article.setJournal(content);
+                case "N1":
+                    journal.setNotes(content);
+                    break;
+                case "T2":
+                    journal.setJournal(content);
                     break;
                 case "VL":
-                    article.setVolume(content);
+                    journal.setVolume(content);
                     break;
-                case "IS":
-                    article.setNumber(content);
+                case "C7":
+                    journal.setNumber(content);
                     break;
-                case "SP":
-                    article.setPages(content);
+                case "M2":
+                    journal.setPages(content);
                     break;
                 default:
             }
         }
-        return article;
+        return journal;
     }
 
-    private RisEntry createBook(final ArrayList<String[]> listPartLine) {
+    private BaseReference createBook(final ArrayList<String[]> listPartLine) {
         final Book book = new Book();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -160,14 +140,23 @@ public class Import {
 
             switch (field) {
                 case "AU":
+                    book.setAuthor(content);
+                    break;
                 case "A2":
+                    book.setSerieEditor(content);
+                    break;
                 case "A3":
-                case "A4":
+                    book.setEditor(content);
+                    break;
                 case "TI":
+                    book.setTitle(content);
+                    break;
                 case "PY":
                 case "DA":
+                    book.setDate(content);
+                    break;
                 case "N1":
-                    commonField(field, content, book);
+                    book.setNotes(content);
                     break;
                 case "PB":
                     book.setPublisher(content);
@@ -190,8 +179,8 @@ public class Import {
         return book;
     }
 
-    private RisEntry createSecc(final ArrayList<String[]> listPartLine) {
-        final Secc section = new Secc();
+    private BaseReference createBookSection(final ArrayList<String[]> listPartLine) {
+        final BookSection section = new BookSection();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
             final String content = listPartLine.get(i)[1];
@@ -199,14 +188,22 @@ public class Import {
 
             switch (field) {
                 case "AU":
+                    section.setAuthor(content);
+                    break;
                 case "A2":
+                    section.setEditor(content);
+                    break;
                 case "A3":
-                case "A4":
+                    section.setSeriesEditor(content);
+                    break;
                 case "TI":
+                    section.setTitle(content);
+                    break;
                 case "PY":
-                case "DA":
+                    section.setDate(content);
+                    break;
                 case "N1":
-                    commonField(field, content, section);
+                    section.setNotes(content);
                     break;
                 case "PB":
                     section.setPublisher(content);
@@ -223,7 +220,7 @@ public class Import {
                 case "ET":
                     section.setEdition(content);
                     break;
-                case "EP":
+                case "SE":
                     section.setChapter(content);
                     break;
                 case "SP":
@@ -235,25 +232,28 @@ public class Import {
         return section;
     }
 
-    private RisEntry createThes(final ArrayList<String[]> listPartLine) {
-        final Thes thesis = new Thes();
+    private BaseReference createThesis(final ArrayList<String[]> listPartLine) {
+        final Thesis thesis = new Thesis();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
             final String content = listPartLine.get(i)[1];
             field = field.trim();
             switch (field) {
                 case "AU":
-                case "A2":
-                case "A3":
-                case "A4":
+                    thesis.setAuthor(content);
+                    break;
                 case "TI":
+                    thesis.setTitle(content);
+                    break;
                 case "PY":
                 case "DA":
+                    thesis.setDate(content);
+                    break;
                 case "N1":
-                    commonField(field, content, thesis);
+                    thesis.setNotes(content);
                     break;
                 case "PB":
-                    thesis.setUniversity(content);
+                    thesis.setSchool(content);
                     break;
                 case "M3":
                     thesis.setThesisType(content);
@@ -267,22 +267,31 @@ public class Import {
         return thesis;
     }
 
-    private RisEntry createConf(final ArrayList<String[]> listPartLine) {
-        final Conf proceedings = new Conf();
+    private BaseReference createConferenceProceedings(final ArrayList<String[]> listPartLine) {
+        final ConferenceProceedings proceedings = new ConferenceProceedings();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
             final String content = listPartLine.get(i)[1];
             field = field.trim();
             switch (field) {
                 case "AU":
+                    proceedings.setAuthor(content);
+                    break;
                 case "A2":
+                    proceedings.setEditor(content);
+                    break;
                 case "A3":
-                case "A4":
+                    proceedings.setSeriesEditor(content);
+                    break;
                 case "TI":
+                    proceedings.setTitle(content);
+                    break;
                 case "PY":
                 case "DA":
+                    proceedings.setDate(content);
+                    break;
                 case "N1":
-                    commonField(field, content, proceedings);
+                    proceedings.setNotes(content);
                     break;
                 case "VL":
                     proceedings.setVolume(content);

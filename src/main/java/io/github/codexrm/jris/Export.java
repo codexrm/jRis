@@ -7,76 +7,50 @@ import java.util.ArrayList;
 
 public class Export {
 
+    private final String ti = "TI  - ";
+    private final String da = "DA  - ";
+    private final String vl = "VL  - ";
+    private final String ad = "AD  - ";
+    private final String pb = "PB  - ";
+
     public Export() {
         // Do nothing
     }
 
-    public void writeValue(final ArrayList<RisEntry> listReference, final Writer writer) throws IOException {
+    public void writeValue(final ArrayList<BaseReference> listReference, final Writer writer) throws IOException {
         final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
-        for (final RisEntry entry : listReference) {
+        for (final BaseReference entry : listReference) {
             identifyType(entry, bufferedWriter);
         }
         closeFile(bufferedWriter);
     }
 
-    private void identifyType(final RisEntry reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void identifyType(final BaseReference reference, final BufferedWriter bufferedWriter) throws IOException {
 
-
-        if (reference instanceof Jour) {
-            writeJour((Jour) reference, bufferedWriter);
-        } else {
-            if (reference instanceof Book) {
+        switch (reference.getClass().getSimpleName()) {
+            case "JournalArticle":
+                writeJournal((JournalArticle) reference, bufferedWriter);
+                break;
+            case "Book":
                 writeBook((Book) reference, bufferedWriter);
-            } else {
-                if (reference instanceof Secc) {
-                    writeSecc((Secc) reference, bufferedWriter);
-                } else {
-                    if (reference instanceof Thes) {
-                        writeThes((Thes) reference, bufferedWriter);
-                    } else {
-                        if (reference instanceof Conf) {
-                            writeConf((Conf) reference, bufferedWriter);
-                        }
-                    }
-                }
-            }
+                break;
+            case "BookSection":
+                writeBookSection((BookSection) reference, bufferedWriter);
+                break;
+            case "Thesis":
+                writeThesis((Thesis) reference, bufferedWriter);
+                break;
+            default:
+                writeConferenceProceedings((ConferenceProceedings) reference, bufferedWriter);
         }
+
     }
 
-    private void commonField(final RisEntry reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void commonField(final BaseReference reference, final BufferedWriter bufferedWriter) throws IOException {
 
-        bufferedWriter.newLine();
-        if (reference.getAuthor() != null) {
-            bufferedWriter.write("AU  - " + reference.getAuthor());
-            bufferedWriter.newLine();
-        }
-        if (reference.getAuthor2() != null) {
-            bufferedWriter.write("A2  - " + reference.getAuthor2());
-            bufferedWriter.newLine();
-        }
-        if (reference.getAuthor3() != null) {
-            bufferedWriter.write("A3  - " + reference.getAuthor3());
-            bufferedWriter.newLine();
-        }
-        if (reference.getAuthor4() != null) {
-            bufferedWriter.write("A4  - " + reference.getAuthor4());
-            bufferedWriter.newLine();
-        }
-        if (reference.getTitle() != null) {
-            bufferedWriter.write("TI  - " + reference.getTitle());
-            bufferedWriter.newLine();
-        }
-        if (reference.da != null) {
-            if (reference instanceof Secc) {
-                final String[] da = reference.da.split("/");
-                bufferedWriter.write("PY  - " + da[0].strip());
-            } else {
-                bufferedWriter.write("DA  - " + reference.da);
-            }
-            bufferedWriter.newLine();
-        }
         if (reference.getNotes() != null) {
+            bufferedWriter.newLine();
             bufferedWriter.write("N1  - " + reference.getNotes());
             bufferedWriter.newLine();
         }
@@ -92,25 +66,56 @@ public class Export {
         bufferedWriter.close();
     }
 
-    private void writeJour(final Jour reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void writePersonList(final ArrayList<String> personList, final BufferedWriter bufferedWriter, final String field) throws IOException {
+
+        for (final String person : personList) {
+            if (person != null) {
+                switch (field) {
+                    case "AU":
+                        bufferedWriter.write("AU  - " + person);
+                        bufferedWriter.newLine();
+                        break;
+                    case "A2":
+                        bufferedWriter.write("A2  - " + person);
+                        bufferedWriter.newLine();
+                        break;
+                    default:
+                        bufferedWriter.write("A3  - " + person);
+                        bufferedWriter.newLine();
+                }
+
+            }
+        }
+    }
+
+    private void writeJournal(final JournalArticle reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - JOUR");
         commonField(reference, bufferedWriter);
+        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
 
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            bufferedWriter.write(da + reference.getDate());
+            bufferedWriter.newLine();
+        }
         if (reference.getJournal() != null) {
-            bufferedWriter.write("JO  - " + reference.getJournal());
+            bufferedWriter.write("T2  - " + reference.getJournal());
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write("VL  - " + reference.getVolume());
+            bufferedWriter.write(vl + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getNumber() != null) {
-            bufferedWriter.write("IS  - " + reference.getNumber());
+            bufferedWriter.write("C7  - " + reference.getNumber());
             bufferedWriter.newLine();
         }
         if (reference.getPages() != null) {
-            bufferedWriter.write("SP  - " + reference.getPages());
+            bufferedWriter.write("M2  - " + reference.getPages());
         }
         closeReference(bufferedWriter);
     }
@@ -118,18 +123,29 @@ public class Export {
     private void writeBook(final Book reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - BOOK");
-        bufferedWriter.newLine();
+        commonField(reference, bufferedWriter);
+        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
+        writePersonList(reference.getListEditor(), bufferedWriter, "A3");
+        writePersonList(reference.getListSerieEditor(), bufferedWriter, "A2");
 
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            bufferedWriter.write(da + reference.getDate());
+            bufferedWriter.newLine();
+        }
         if (reference.getPublisher() != null) {
-            bufferedWriter.write("PB  - " + reference.getPublisher());
+            bufferedWriter.write(pb + reference.getPublisher());
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write("VL  - " + reference.getVolume());
+            bufferedWriter.write(vl + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write("AD  - " + reference.getAddress());
+            bufferedWriter.write(ad + reference.getAddress());
             bufferedWriter.newLine();
         }
         if (reference.getEdition() != null) {
@@ -142,21 +158,33 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeSecc(final Secc reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void writeBookSection(final BookSection reference, final BufferedWriter bufferedWriter) throws IOException {
 
-        bufferedWriter.write("TY  - SECC");
-        bufferedWriter.newLine();
+        bufferedWriter.write("TY  - CHAP");
+        commonField(reference, bufferedWriter);
+        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
+        writePersonList(reference.getListEditor(), bufferedWriter, "A2");
+        writePersonList(reference.getListSeriesEditor(), bufferedWriter, "A3");
 
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            final String[] fullDate = reference.getDate().split("/", 2);
+            bufferedWriter.write("PY  - " + fullDate[0].strip());
+            bufferedWriter.newLine();
+        }
         if (reference.getPublisher() != null) {
-            bufferedWriter.write("PB  - " + reference.getPublisher());
+            bufferedWriter.write(pb + reference.getPublisher());
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write("VL  - " + reference.getVolume());
+            bufferedWriter.write(vl + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write("AD  - " + reference.getAddress());
+            bufferedWriter.write(ad + reference.getAddress());
             bufferedWriter.newLine();
         }
         if (reference.getEdition() != null) {
@@ -168,7 +196,7 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getChapter() != null) {
-            bufferedWriter.write("EP  - " + reference.getChapter());
+            bufferedWriter.write("SE  - " + reference.getChapter());
             bufferedWriter.newLine();
         }
         if (reference.getPages() != null) {
@@ -177,13 +205,22 @@ public class Export {
         closeReference(bufferedWriter);
     }
 
-    private void writeThes(final Thes reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void writeThesis(final Thesis reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - THES");
         commonField(reference, bufferedWriter);
+        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
 
-        if (reference.getUniversity() != null) {
-            bufferedWriter.write("PB  - " + reference.getUniversity());
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            bufferedWriter.write(da + reference.getDate());
+            bufferedWriter.newLine();
+        }
+        if (reference.getSchool() != null) {
+            bufferedWriter.write(pb + reference.getSchool());
             bufferedWriter.newLine();
         }
         if (reference.getThesisType() != null) {
@@ -191,18 +228,29 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write("AD  - " + reference.getAddress());
+            bufferedWriter.write(ad + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }
 
-    private void writeConf(final Conf reference, final BufferedWriter bufferedWriter) throws IOException {
+    private void writeConferenceProceedings(final ConferenceProceedings reference, final BufferedWriter bufferedWriter) throws IOException {
 
         bufferedWriter.write("TY  - CONF");
         commonField(reference, bufferedWriter);
+        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
+        writePersonList(reference.getListEditor(), bufferedWriter, "A2");
+        writePersonList(reference.getListSeriesEditor(), bufferedWriter, "A3");
 
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            bufferedWriter.write(da + reference.getDate());
+            bufferedWriter.newLine();
+        }
         if (reference.getVolume() != null) {
-            bufferedWriter.write("VL  - " + reference.getVolume());
+            bufferedWriter.write(vl + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getSerie() != null) {
@@ -210,7 +258,7 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write("AD  - " + reference.getAddress());
+            bufferedWriter.write(ad + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }

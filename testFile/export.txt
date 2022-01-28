@@ -1,45 +1,57 @@
 TY  - JOUR
+N1  - aa
 AU  - Martin-Gonzalez,Jacob
 TI  - project of education
 DA  - 2008/03
-N1  - aa
-JO  - Sciences and education
+T2  - Sciences and education
 VL  - vol132
-IS  - no3443
-SP  - p1011
+C7  - no3443
+M2  - p1011
 ER  - 
 TY  - BOOK
+N1  - bb
+AU  - Navarro-Gener,Enrique
+A3  - Martin-Gonzalez,Jacob
+A2  - Diaz,Camilo
+TI  - relations and your career
+DA  - 1987/04
 PB  - Prencite Hall
 VL  - vol35
 AD  - ave67 no02
-ET  - Ing Isis Perez
+ET  - I
 T2  - xx7
 ER  - 
-TY  - SECC
+TY  - CHAP
+N1  - cc
+AU  - Fernadez-Diaz,Maria
+A2  - Martin-Gonzalez,Jacob
+A3  - Fernadez-Diaz,Maria
+TI  - introduction to Windows
+PY  - 2012
 PB  - Education
 VL  - vol35
 AD  - ave 76 no74
-ET  - Ing Olga Domigz
+ET  - II
 T3  - ja4
-EP  - I
+SE  - I
 SP  - 1234
 ER  - 
 TY  - THES
+N1  - dd
 AU  - Navarro-Gener,Enrique
-A2  - Martin-Gonzalez,Jacob
-A3  - Fernadez-Diaz,Maria
 TI  - Reference
 DA  - 2019/05
-N1  - dd
 PB  - Cespedes
 M3  - phd
 AD  - ave61
 ER  - 
 TY  - CONF
+N1  - ee
 AU  - Nunnez,Roberto
+A2  - Gil,Marcos
+A3  - Navarro,Luis
 TI  - The men
 DA  - 2020/08
-N1  - ee
 VL  - vol34
 T3  - x13
 AD  - ave76,no87

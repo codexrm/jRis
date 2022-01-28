@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class RisManager {
 
-    private final ArrayList<RisEntry> listReference;
-    private Export exportRis;
-    private Import importRis;
+    private final ArrayList<BaseReference> listReference;
+    private final Export exportRis;
+    private final Import importRis;
 
     public RisManager() {
         super();
@@ -22,36 +22,21 @@ public class RisManager {
         importRis = new Import();
     }
 
-    public ArrayList<RisEntry> getListReference() {
+    public ArrayList<BaseReference> getListReference() {
         return listReference;
     }
 
-    public void addReference(@NonNull final RisEntry reference) {
+    public void addReference(@NonNull final BaseReference reference) {
         listReference.add(reference);
     }
 
-    public Export getExportRis() {
-        return exportRis;
-    }
-
-    public void setExportRis(final Export exportRis) {
-        this.exportRis = exportRis;
-    }
-
-    public Import getImportRis() {
-        return importRis;
-    }
-
-    public void setImportRis(final Import importRis) {
-        this.importRis = importRis;
-    }
 
     public void exportListReference(@NonNull final String path) throws IOException {
         final Writer writer = new FileWriter(path);
         exportRis.writeValue(listReference, writer);
     }
 
-    public ArrayList<RisEntry> importReferences(@NonNull final Reader reader) throws IOException {
+    public ArrayList<BaseReference> importReferences(@NonNull final Reader reader) throws IOException {
         return importRis.readReader(reader);
     }
 }

@@ -12,37 +12,40 @@ import org.junit.jupiter.api.Test;
 
 class RisTest {
     private final RisManager manager = new RisManager();
-    private final Jour article = new Jour();
+    private final JournalArticle article = new JournalArticle();
     private final Book book = new Book();
-    private final Secc section = new Secc();
-    private final Thes thesis = new Thes();
-    private final Conf conference = new Conf();
+    private final BookSection section = new BookSection();
+    private final Thesis thesis = new Thesis();
+    private final ConferenceProceedings conference = new ConferenceProceedings();
 
     @Test
     void addReference() {
         article.setTitle("project of education");
-        article.setDate("2008", RisMonth.MARCH);
+        article.setDate("2008/03");
         article.setNotes("aa");
         article.setJournal("Sciences and education");
         article.setVolume("vol132");
         article.setNumber("no3443");
         article.setPages("p1011");
-        article.setAuthor("Jacob", "Martin-Gonzalez");
+        article.setAuthor("Martin-Gonzalez,Jacob");
         manager.addReference(article);
 
         book.setTitle("relations and your career");
-        book.setDate("1987", RisMonth.APRIL);
+        book.setDate("1987/04");
         book.setNotes("bb");
-        book.setAuthor("Enrique", "Navarro-Gener");
-        book.setAuthor2("Jacob", "Martin-Gonzalez");
+        book.setAuthor("Navarro-Gener,Enrique");
+        book.setEditor("Martin-Gonzalez,Jacob");
+        book.setSerieEditor("Diaz,Camilo");
         book.setPublisher("Prencite Hall");
         book.setVolume("vol35");
         book.setSerie("xx7");
         book.setAddress("ave67 no02");
-        book.setEdition("Ing Isis Perez");
+        book.setEdition("I");
         manager.addReference(book);
 
-        section.setAuthor("Maria", "Fernadez-Diaz");
+        section.setAuthor("Fernadez-Diaz,Maria");
+        section.setEditor("Martin-Gonzalez,Jacob");
+        section.setSeriesEditor("Fernadez-Diaz,Maria");
         section.setTitle("introduction to Windows");
         section.setDate("2012");
         section.setNotes("cc");
@@ -50,25 +53,25 @@ class RisTest {
         section.setVolume("vol35");
         section.setSerie("ja4");
         section.setAddress("ave 76 no74");
-        section.setEdition("Ing Olga Domigz");
+        section.setEdition("II");
         section.setChapter("I");
         section.setPages("1234");
         manager.addReference(section);
 
-        thesis.setAuthor("Enrique", "Navarro-Gener");
-        thesis.setAuthor2("Jacob", "Martin-Gonzalez");
-        thesis.setAuthor3("Maria", "Fernadez-Diaz");
+        thesis.setAuthor("Navarro-Gener,Enrique");
         thesis.setTitle("Reference");
-        thesis.setDate("2019", RisMonth.MAY);
+        thesis.setDate("2019/05");
         thesis.setNotes("dd");
-        thesis.setUniversity("Cespedes");
+        thesis.setSchool("Cespedes");
         thesis.setThesisType("phd");
         thesis.setAddress("ave61");
         manager.addReference(thesis);
 
-        conference.setAuthor("Roberto", "Nunnez");
+        conference.setAuthor("Nunnez,Roberto");
+        conference.setEditor("Gil,Marcos");
+        conference.setSeriesEditor("Navarro,Luis");
         conference.setTitle("The men");
-        conference.setDate("2020", RisMonth.AUGUST);
+        conference.setDate("2020/08");
         conference.setNotes("ee");
         conference.setVolume("vol34");
         conference.setSerie("x13");
@@ -82,14 +85,14 @@ class RisTest {
             manager.exportListReference(pathExportListReference.toString());
             final Reader readerExport = new FileReader(pathExportListReference.toString());
 
-            final ArrayList<RisEntry> listExport = manager.importReferences(readerExport);
+            final ArrayList<BaseReference> listExport = manager.importReferences(readerExport);
 
             Assertions.assertEquals(5, listExport.size());
 
             final Path pathImportListReference = Paths.get("testFile", "importRis.txt");
             final Reader reader = new FileReader(pathImportListReference.toString());
 
-            final ArrayList<RisEntry> list = manager.importReferences(reader);
+            final ArrayList<BaseReference> list = manager.importReferences(reader);
 
             Assertions.assertEquals(5, list.size());
 

@@ -1,6 +1,8 @@
 uuuuuuu
 TY  - CONF
 AU  - Nunnez,Roberto
+A2  - Montaner,Luis
+A3  - Alfonso,Jose
 TI  - The woman
 DA  - 0202/07
 N1  - nn
@@ -25,7 +27,7 @@ PB  - Fructuoso Rodriguez
 M3  - Masters
 AD  - ave65
 ER  - 
-TY  - SECC
+TY  - CHAP
 AU  - Gomez,Mario
 A2  - Borges,Juan
 A3  - Nuñez,Rolandi
@@ -42,6 +44,7 @@ SP  - 12
 ER  - 
 TY  - BOOK
 AU  - Borges,Juan
+A2  - Gil,Camilo
 TI  - Plan B
 DA  - 2018/12
 N1  - XX
