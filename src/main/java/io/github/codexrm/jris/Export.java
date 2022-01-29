@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
 
+/**
+ * Represents the class in charge of exporting the reference list to ris format
+ *
+ * @author Marynes Diaz
+ * @version 1.0
+ */
 public class Export {
 
     private final String ti = "TI  - ";
@@ -17,6 +23,14 @@ public class Export {
         // Do nothing
     }
 
+    /**
+     * Write the values of the reference to the ris format
+     *
+     * @param listReference a list with all reference types to export
+     * @param writer responsible for writing to the file
+     * @throws IOException
+     * @since 1.0
+     */
     public void writeValue(final ArrayList<BaseReference> listReference, final Writer writer) throws IOException {
         final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
@@ -92,7 +106,7 @@ public class Export {
 
         bufferedWriter.write("TY  - JOUR");
         commonField(reference, bufferedWriter);
-        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
 
         if (reference.getTitle() != null) {
             bufferedWriter.write(ti + reference.getTitle());
@@ -128,8 +142,8 @@ public class Export {
 
         bufferedWriter.write("TY  - BOOK");
         commonField(reference, bufferedWriter);
-        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
-        writePersonList(reference.getListEditor(), bufferedWriter, "A3");
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
+        writePersonList(reference.getEditorList(), bufferedWriter, "A3");
         writePersonList(reference.getListSerieEditor(), bufferedWriter, "A2");
 
         if (reference.getTitle() != null) {
@@ -170,9 +184,9 @@ public class Export {
 
         bufferedWriter.write("TY  - CHAP");
         commonField(reference, bufferedWriter);
-        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
-        writePersonList(reference.getListEditor(), bufferedWriter, "A2");
-        writePersonList(reference.getListSeriesEditor(), bufferedWriter, "A3");
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
+        writePersonList(reference.getEditorList(), bufferedWriter, "A2");
+        writePersonList(reference.getSeriesEditorList(), bufferedWriter, "A3");
 
         if (reference.getTitle() != null) {
             bufferedWriter.write(ti + reference.getTitle());
@@ -216,7 +230,7 @@ public class Export {
 
         bufferedWriter.write("TY  - THES");
         commonField(reference, bufferedWriter);
-        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
 
         if (reference.getTitle() != null) {
             bufferedWriter.write(ti + reference.getTitle());
@@ -248,9 +262,9 @@ public class Export {
 
         bufferedWriter.write("TY  - CONF");
         commonField(reference, bufferedWriter);
-        writePersonList(reference.getListAuthor(), bufferedWriter, "AU");
-        writePersonList(reference.getListEditor(), bufferedWriter, "A2");
-        writePersonList(reference.getListSeriesEditor(), bufferedWriter, "A3");
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
+        writePersonList(reference.getEditorList(), bufferedWriter, "A2");
+        writePersonList(reference.getSeriesEditorList(), bufferedWriter, "A3");
 
         if (reference.getTitle() != null) {
             bufferedWriter.write(ti + reference.getTitle());

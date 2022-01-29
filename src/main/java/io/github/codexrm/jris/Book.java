@@ -3,11 +3,18 @@ package io.github.codexrm.jris;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * Represents an book Reference
+ * Please see the {@link io.github.codexrm.jris.BaseReference}
+ *
+ * @author Marynes Diaz
+ * @version 1.0
+ */
 public class Book extends BaseReference {
 
-    private final ArrayList<String> listAuthor;
-    private final ArrayList<String> listEditor;
-    private final ArrayList<String> listSeriesEditor;
+    private final ArrayList<String> authorList;
+    private final ArrayList<String> editorList;
+    private final ArrayList<String> seriesEditorList;
     private String title;
     private LocalDate date;
     private String publisher;
@@ -19,87 +26,187 @@ public class Book extends BaseReference {
 
     public Book() {
         super();
-        listAuthor = new ArrayList<>();
-        listEditor = new ArrayList<>();
-        listSeriesEditor = new ArrayList<>();
+        authorList = new ArrayList<>();
+        editorList = new ArrayList<>();
+        seriesEditorList = new ArrayList<>();
     }
 
-    public ArrayList<String> getListAuthor() {
-        return listAuthor;
+    /**
+     * Gets the book’s author list.
+     *
+     * @return the book’s authorList.
+     */
+    public ArrayList<String> getAuthorList() {
+        return authorList;
     }
 
-    public void setAuthor(final String Author) {
-        this.listAuthor.add(Author);
+    /**
+     * Sets the book’s author.
+     *
+     * @param author A String containing the book’s author.
+     */
+    public void setAuthor(final String author) {
+        this.authorList.add(author);
     }
 
-    public ArrayList<String> getListEditor() {
-        return listEditor;
+    /**
+     * Gets the book’s editor list.
+     *
+     * @return the book’s editorList.
+     */
+    public ArrayList<String> getEditorList() {
+        return editorList;
     }
 
+    /**
+     * Sets the book’s editor.
+     *
+     * @param editor A String containing the book’s editor.
+     */
     public void setEditor(final String editor) {
-        this.listEditor.add(editor);
+        this.editorList.add(editor);
     }
 
+    /**
+     * Gets the book’s serie editor list.
+     *
+     * @return the book’s serieEditorList.
+     */
     public ArrayList<String> getListSerieEditor() {
-        return listSeriesEditor;
+        return seriesEditorList;
     }
 
+    /**
+     * Sets the book’s series editor.
+     *
+     * @param seriesEditor A String containing the book’s seriesEditor.
+     */
     public void setSerieEditor(final String seriesEditor) {
-        this.listSeriesEditor.add(seriesEditor);
+        this.seriesEditorList.add(seriesEditor);
     }
 
+    /**
+     * Gets the book’s title.
+     *
+     * @return the book’s title.
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Sets the book’s title.
+     *
+     * @param title A String containing the book’s title.
+     */
     public void setTitle(final String title) {
         this.title = title;
     }
 
+    /**
+     * Gets the book’s date.
+     *
+     * @return the book’s date.
+     */
     public LocalDate getDate() {
         return date;
     }
 
+    /**
+     * Sets the book’s date.
+     *
+     * @param date A LocalDate containing the book’s date.
+     */
     public void setDate(final LocalDate date) {
         this.date = date;
     }
 
+    /**
+     * Gets the book’s publisher.
+     *
+     * @return the book’s publisher.
+     */
     public String getPublisher() {
         return publisher;
     }
 
+    /**
+     * Sets the book’s publisher.
+     *
+     * @param publisher A String containing the book’s publisher.
+     */
     public void setPublisher(final String publisher) {
         this.publisher = publisher;
     }
 
+    /**
+     * Gets the book’s volume.
+     *
+     * @return the book’s volume.
+     */
     public String getVolume() {
         return volume;
     }
 
+    /**
+     * Sets the book’s volume.
+     *
+     * @param volume A String containing the book’s volume.
+     */
     public void setVolume(final String volume) {
         this.volume = volume;
     }
 
+    /**
+     * Gets the book’s serie.
+     *
+     * @return the book’s serie.
+     */
     public String getSerie() {
         return serie;
     }
 
+    /**
+     * Sets the book’s serie.
+     *
+     * @param serie A String containing the book’s serie.
+     */
     public void setSerie(final String serie) {
         this.serie = serie;
     }
 
+    /**
+     * Gets the book’s address.
+     *
+     * @return the book’s address.
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     * Sets the book’s address.
+     *
+     * @param address A String containing the book’s address.
+     */
     public void setAddress(final String address) {
         this.address = address;
     }
 
+    /**
+     * Gets the book’s edition.
+     *
+     * @return the book’s edition.
+     */
     public String getEdition() {
         return edition;
     }
 
+    /**
+     * Sets the book’s edition.
+     *
+     * @param edition A String containing the book’s edition.
+     */
     public void setEdition(final String edition) {
         this.edition = edition;
     }

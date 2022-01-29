@@ -79,7 +79,7 @@ class RisTest {
         conference.setAddress("ave76,no87");
         manager.addReference(conference);
 
-        Assertions.assertEquals(5, manager.getListReference().size());
+        Assertions.assertEquals(5, manager.getReferenceList().size());
 
         try {
             final Path pathExportListReference = Paths.get("testFile", "export.txt");

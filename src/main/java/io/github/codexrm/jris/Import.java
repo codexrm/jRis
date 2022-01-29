@@ -9,12 +9,26 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Represents the class in charge of importing the file en ris format
+ *
+ * @author Marynes Diaz
+ * @version 1.0
+ */
 public class Import {
 
     public Import() {
         // Do nothing
     }
 
+    /**
+     * Read the values of the file to the ris format
+     *
+     * @param reader responsible for reader to the file
+     * @return list with all references imported.
+     * @throws IOException
+     * @since 1.0
+     */
     public ArrayList<BaseReference> readReader(final Reader reader) throws IOException {
 
         final ArrayList<BaseReference> listReference = new ArrayList<>();
