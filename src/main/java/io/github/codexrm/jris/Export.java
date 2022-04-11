@@ -55,8 +55,9 @@ public class Export {
             case "Thesis":
                 writeThesis((Thesis) reference, bufferedWriter);
                 break;
-            default:
+            case "ConferenceProceedings":
                 writeConferenceProceedings((ConferenceProceedings) reference, bufferedWriter);
+            default:
         }
 
     }
