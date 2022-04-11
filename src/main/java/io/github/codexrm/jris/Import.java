@@ -169,8 +169,9 @@ public class Import {
         final JournalArticle journal = new JournalArticle();
         for (int i = 1; i < listPartLine.size() - 1; i++) {
             String field = listPartLine.get(i)[0];
-            final String content = listPartLine.get(i)[1];
+            String content = listPartLine.get(i)[1];
             field = field.trim();
+            content = content.trim();
 
             switch (field) {
                 case "AU":
@@ -208,8 +209,9 @@ public class Import {
         final Book book = new Book();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            final String content = listPartLine.get(i)[1];
+            String content = listPartLine.get(i)[1];
             field = field.trim();
+            content = content.trim();
 
             switch (field) {
                 case "AU":
@@ -256,8 +258,9 @@ public class Import {
         final BookSection section = new BookSection();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            final String content = listPartLine.get(i)[1];
+            String content = listPartLine.get(i)[1];
             field = field.trim();
+            content = content.trim();
 
             switch (field) {
                 case "AU":
@@ -309,8 +312,10 @@ public class Import {
         final Thesis thesis = new Thesis();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            final String content = listPartLine.get(i)[1];
+            String content = listPartLine.get(i)[1];
             field = field.trim();
+            content = content.trim();
+
             switch (field) {
                 case "AU":
                     thesis.setAuthor(content);
@@ -344,8 +349,10 @@ public class Import {
         final ConferenceProceedings proceedings = new ConferenceProceedings();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
-            final String content = listPartLine.get(i)[1];
+            String content = listPartLine.get(i)[1];
             field = field.trim();
+            content = content.trim();
+
             switch (field) {
                 case "AU":
                     proceedings.setAuthor(content);
