@@ -51,11 +51,12 @@ public class RisManager {
     /**
      * Export reference list a Ris format
      *
-     * @param path A String for identificate the path to the file .
+     * @param path A String to identify the path to the file .
      * @throws IOException
      * @since 1.0
      */
     public void exportListReference(@NonNull final String path) throws IOException {
+
         final Writer writer = new FileWriter(path);
         exportRis.writeValue(referenceList, writer);
     }

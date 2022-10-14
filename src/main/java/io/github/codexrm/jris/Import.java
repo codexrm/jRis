@@ -62,6 +62,7 @@ public class Import {
     }
 
     private String[] validateExpression(final String line) {
+
         final Pattern pat = Pattern.compile("^[A-Z][A-Z1-9]\\s\\s-\\s.*");
         final Matcher mat = pat.matcher(line);
         if (mat.matches()) {
@@ -73,6 +74,7 @@ public class Import {
     }
 
     private boolean isNumber(final String number) {
+
         try {
             Long.valueOf(number);
             return true;
@@ -83,6 +85,7 @@ public class Import {
     }
 
     private String validateYear(final String year) {
+
         if (isNumber(year)) {
             final char[] charYear = year.toCharArray();
             switch (charYear.length) {
@@ -101,6 +104,7 @@ public class Import {
     }
 
     private String validateMonth(String month) {
+
         if (isNumber(month)) {
             final char[] charMonth = month.toCharArray();
             if (charMonth.length == 1) {
@@ -172,6 +176,7 @@ public class Import {
     }
 
     private BaseReference createJournal(final ArrayList<String[]> listPartLine) {
+
         final JournalArticle journal = new JournalArticle();
         for (int i = 1; i < listPartLine.size() - 1; i++) {
             String field = listPartLine.get(i)[0];
@@ -212,6 +217,7 @@ public class Import {
     }
 
     private BaseReference createBook(final ArrayList<String[]> listPartLine) {
+
         final Book book = new Book();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -246,7 +252,7 @@ public class Import {
                     book.setVolume(content);
                     break;
                 case "T2":
-                    book.setSerie(content);
+                    book.setSeries(content);
                     break;
                 case "AD":
                     book.setAddress(content);
@@ -261,6 +267,7 @@ public class Import {
     }
 
     private BaseReference createBookSection(final ArrayList<String[]> listPartLine) {
+
         final BookSection section = new BookSection();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -294,7 +301,7 @@ public class Import {
                     section.setVolume(content);
                     break;
                 case "T3":
-                    section.setSerie(content);
+                    section.setSeries(content);
                     break;
                 case "AD":
                     section.setAddress(content);
@@ -315,6 +322,7 @@ public class Import {
     }
 
     private BaseReference createThesis(final ArrayList<String[]> listPartLine) {
+
         final Thesis thesis = new Thesis();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -352,6 +360,7 @@ public class Import {
     }
 
     private BaseReference createConferenceProceedings(final ArrayList<String[]> listPartLine) {
+
         final ConferenceProceedings proceedings = new ConferenceProceedings();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -383,7 +392,7 @@ public class Import {
                     proceedings.setVolume(content);
                     break;
                 case "T3":
-                    proceedings.setSerie(content);
+                    proceedings.setSeries(content);
                     break;
                 case "AD":
                     proceedings.setAddress(content);
@@ -395,6 +404,7 @@ public class Import {
     }
 
     private BaseReference createConferencePaper(final ArrayList<String[]> listPartLine) {
+
         final ConferencePaper paper = new ConferencePaper();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];
@@ -438,6 +448,7 @@ public class Import {
     }
 
     private BaseReference createWebPage(final ArrayList<String[]> listPartLine) {
+
         final WebPage webPage = new WebPage();
         for (int i = 1; i < listPartLine.size(); i++) {
             String field = listPartLine.get(i)[0];

@@ -19,7 +19,7 @@ public class Book extends BaseReference {
     private LocalDate date;
     private String publisher;
     private String volume;
-    private String serie;
+    private String series;
     private String address;
     private String edition;
 
@@ -158,21 +158,21 @@ public class Book extends BaseReference {
     }
 
     /**
-     * Gets the book’s serie.
+     * Gets the book’s series.
      *
-     * @return the book’s serie.
+     * @return the book’s series.
      */
-    public String getSerie() {
-        return serie;
+    public String getSeries() {
+        return series;
     }
 
     /**
-     * Sets the book’s serie.
+     * Sets the book’s series.
      *
-     * @param serie A String containing the book’s serie.
+     * @param series A String containing the book’s series.
      */
-    public void setSerie(final String serie) {
-        this.serie = serie;
+    public void setSeries(final String series) {
+        this.series = series;
     }
 
     /**

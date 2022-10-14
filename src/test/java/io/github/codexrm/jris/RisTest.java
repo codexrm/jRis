@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class RisTest {
+
     private final RisManager manager = new RisManager();
     private final JournalArticle article = new JournalArticle();
     private final Book book = new Book();
@@ -23,6 +24,7 @@ class RisTest {
 
     @Test
     void addReference() {
+
         article.setTitle("project of education");
         article.setDate(LocalDate.of(2008, 3, 1));
         article.setNotes("aa");
@@ -41,7 +43,7 @@ class RisTest {
         book.setSerieEditor("Diaz,Camilo");
         book.setPublisher("Prencite Hall");
         book.setVolume("vol35");
-        book.setSerie("xx7");
+        book.setSeries("xx7");
         book.setAddress("ave67 no02");
         book.setEdition("I");
         manager.addReference(book);
@@ -54,7 +56,7 @@ class RisTest {
         section.setNotes("cc");
         section.setPublisher("Education");
         section.setVolume("vol35");
-        section.setSerie("ja4");
+        section.setSeries("ja4");
         section.setAddress("ave 76 no74");
         section.setEdition("II");
         section.setChapter("I");
@@ -77,7 +79,7 @@ class RisTest {
         proceedings.setDate(LocalDate.of(2020, 8, 1));
         proceedings.setNotes("ee");
         proceedings.setVolume("vol34");
-        proceedings.setSerie("x13");
+        proceedings.setSeries("x13");
         proceedings.setAddress("ave76,no87");
         manager.addReference(proceedings);
 

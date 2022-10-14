@@ -38,7 +38,7 @@ public class JournalArticle extends BaseReference {
     /**
      * Sets the journalArticle’s author.
      *
-     * @param author An String containing the journalArticle’s author.
+     * @param author A String containing the journalArticle’s author.
      */
     public void setAuthor(final String author) {
         this.authorList.add(author);

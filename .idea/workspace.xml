@@ -24,9 +24,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f862d616-df68-4b93-b091-91a484f6c863" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/BookSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/BookSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Export.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Export.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Import.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Import.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/JournalArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/JournalArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/RisManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/RisManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Thesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Thesis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFile/export.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFile/export.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,29 +144,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Export.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jRis$RisTest_addReference.ic" NAME="RisTest.addReference Coverage Results" MODIFIED="1646423375446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/jRis$RisTest_addReference.ic" NAME="RisTest.addReference Coverage Results" MODIFIED="1665767600061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>io.github.codexrm.jris.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/jRis$RisTest.ic" NAME="RisTest Coverage Results" MODIFIED="1649700587801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

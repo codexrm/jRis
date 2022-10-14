@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
- * Represents an thesis Reference
+ * Represents a thesis Reference
  * Please see the {@link io.github.codexrm.jris.BaseReference}
  *
  * @author Marynes Diaz

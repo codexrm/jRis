@@ -13,11 +13,11 @@ import java.util.ArrayList;
  */
 public class Export {
 
-    private final String ti = "TI  - ";
-    private final String da = "DA  - ";
-    private final String vl = "VL  - ";
-    private final String ad = "AD  - ";
-    private final String pb = "PB  - ";
+    private static final String TI = "TI  - ";
+    private static final String DA = "DA  - ";
+    private static final String VL = "VL  - ";
+    private static final String AD = "AD  - ";
+    private static final String PB = "PB  - ";
 
     public Export() {
         // Do nothing
@@ -32,6 +32,7 @@ public class Export {
      * @since 1.0
      */
     public void writeValue(final ArrayList<BaseReference> listReference, final Writer writer) throws IOException {
+
         final BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
         for (final BaseReference entry : listReference) {
@@ -79,6 +80,7 @@ public class Export {
     }
 
     private void closeReference(final BufferedWriter bufferedWriter) throws IOException {
+
         bufferedWriter.newLine();
         bufferedWriter.write("ER  - ");
         bufferedWriter.newLine();
@@ -117,14 +119,14 @@ public class Export {
         writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
             if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
-                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+                bufferedWriter.write(DA + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
             } else {
-                bufferedWriter.write(da + reference.getDate().getYear());
+                bufferedWriter.write(DA + reference.getDate().getYear());
             }
             bufferedWriter.newLine();
         }
@@ -133,7 +135,7 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.write(VL + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getNumber() != null) {
@@ -155,35 +157,35 @@ public class Export {
         writePersonList(reference.getListSerieEditor(), bufferedWriter, "A2");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
             if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
-                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+                bufferedWriter.write(DA + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
             } else {
-                bufferedWriter.write(da + reference.getDate().getYear());
+                bufferedWriter.write(DA + reference.getDate().getYear());
             }
             bufferedWriter.newLine();
         }
         if (reference.getPublisher() != null) {
-            bufferedWriter.write(pb + reference.getPublisher());
+            bufferedWriter.write(PB + reference.getPublisher());
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.write(VL + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.write(AD + reference.getAddress());
             bufferedWriter.newLine();
         }
         if (reference.getEdition() != null) {
             bufferedWriter.write("ET  - " + reference.getEdition());
             bufferedWriter.newLine();
         }
-        if (reference.getSerie() != null) {
-            bufferedWriter.write("T2  - " + reference.getSerie());
+        if (reference.getSeries() != null) {
+            bufferedWriter.write("T2  - " + reference.getSeries());
         }
         closeReference(bufferedWriter);
     }
@@ -197,7 +199,7 @@ public class Export {
         writePersonList(reference.getSeriesEditorList(), bufferedWriter, "A3");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
@@ -205,23 +207,23 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getPublisher() != null) {
-            bufferedWriter.write(pb + reference.getPublisher());
+            bufferedWriter.write(PB + reference.getPublisher());
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.write(VL + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.write(AD + reference.getAddress());
             bufferedWriter.newLine();
         }
         if (reference.getEdition() != null) {
             bufferedWriter.write("ET  - " + reference.getEdition());
             bufferedWriter.newLine();
         }
-        if (reference.getSerie() != null) {
-            bufferedWriter.write("T3  - " + reference.getSerie());
+        if (reference.getSeries() != null) {
+            bufferedWriter.write("T3  - " + reference.getSeries());
             bufferedWriter.newLine();
         }
         if (reference.getChapter() != null) {
@@ -241,19 +243,19 @@ public class Export {
         writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
             if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
-                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+                bufferedWriter.write(DA + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
             } else {
-                bufferedWriter.write(da + reference.getDate().getYear());
+                bufferedWriter.write(DA + reference.getDate().getYear());
             }
             bufferedWriter.newLine();
         }
         if (reference.getSchool() != null) {
-            bufferedWriter.write(pb + reference.getSchool());
+            bufferedWriter.write(PB + reference.getSchool());
             bufferedWriter.newLine();
         }
         if (reference.getThesisType() != null) {
@@ -261,7 +263,7 @@ public class Export {
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.write(AD + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }
@@ -275,27 +277,27 @@ public class Export {
         writePersonList(reference.getSeriesEditorList(), bufferedWriter, "A3");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
             if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
-                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+                bufferedWriter.write(DA + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
             } else {
-                bufferedWriter.write(da + reference.getDate().getYear());
+                bufferedWriter.write(DA + reference.getDate().getYear());
             }
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.write(VL + reference.getVolume());
             bufferedWriter.newLine();
         }
-        if (reference.getSerie() != null) {
-            bufferedWriter.write("T3  - " + reference.getSerie());
+        if (reference.getSeries() != null) {
+            bufferedWriter.write("T3  - " + reference.getSeries());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.write(AD + reference.getAddress());
         }
         closeReference(bufferedWriter);
     }
@@ -308,27 +310,27 @@ public class Export {
         writePersonList(reference.getEditorList(), bufferedWriter, "A2");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {
             if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
-                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+                bufferedWriter.write(DA + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
             } else {
-                bufferedWriter.write(da + reference.getDate().getYear());
+                bufferedWriter.write(DA + reference.getDate().getYear());
             }
             bufferedWriter.newLine();
         }
         if (reference.getVolume() != null) {
-            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.write(VL + reference.getVolume());
             bufferedWriter.newLine();
         }
         if (reference.getPublisher() != null) {
-            bufferedWriter.write("PB  - " + reference.getPublisher());
+            bufferedWriter.write(PB + reference.getPublisher());
             bufferedWriter.newLine();
         }
         if (reference.getAddress() != null) {
-            bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.write(AD + reference.getAddress());
             bufferedWriter.newLine();
         }
         if (reference.getPages() != null) {
@@ -344,7 +346,7 @@ public class Export {
         writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
 
         if (reference.getTitle() != null) {
-            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.write(TI + reference.getTitle());
             bufferedWriter.newLine();
         }
         if (reference.getDate() != null) {

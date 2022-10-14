@@ -18,7 +18,7 @@ public class ConferenceProceedings extends BaseReference {
     private String title;
     private LocalDate date;
     private String volume;
-    private String serie;
+    private String series;
     private String address;
 
     public ConferenceProceedings() {
@@ -137,21 +137,21 @@ public class ConferenceProceedings extends BaseReference {
     }
 
     /**
-     * Gets the conferenceProceedings’s serie.
+     * Gets the conferenceProceedings’s series.
      *
-     * @return the conferenceProceedings’s serie.
+     * @return the conferenceProceedings’s series.
      */
-    public String getSerie() {
-        return serie;
+    public String getSeries() {
+        return series;
     }
 
     /**
-     * Sets the conferenceProceedings’s serie.
+     * Sets the conferenceProceedings’s series.
      *
-     * @param serie A String containing the conferenceProceedings’s serie.
+     * @param series A String containing the conferenceProceedings’s series.
      */
-    public void setSerie(final String serie) {
-        this.serie = serie;
+    public void setSeries(final String series) {
+        this.series = series;
     }
 
     /**
