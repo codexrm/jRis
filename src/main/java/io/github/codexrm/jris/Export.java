@@ -57,6 +57,10 @@ public class Export {
                 break;
             case "ConferenceProceedings":
                 writeConferenceProceedings((ConferenceProceedings) reference, bufferedWriter);
+            case "ConferencePaper":
+                writeConferencePaper((ConferencePaper) reference, bufferedWriter);
+            case "WebPage":
+                writeWebPage((WebPage) reference, bufferedWriter);
             default:
         }
 
@@ -290,6 +294,76 @@ public class Export {
         if (reference.getAddress() != null) {
             bufferedWriter.write(ad + reference.getAddress());
         }
+        closeReference(bufferedWriter);
+    }
+    
+    private void writeConferencePaper(final ConferencePaper reference, final BufferedWriter bufferedWriter) throws IOException {
+
+        bufferedWriter.write("TY  - CPAPER");
+        commonField(reference, bufferedWriter);
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
+        writePersonList(reference.getEditorList(), bufferedWriter, "A2");
+
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write(da + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write(da + reference.getDate().getYear());
+            }
+            bufferedWriter.newLine();
+        }
+        if (reference.getVolume() != null) {
+            bufferedWriter.write(vl + reference.getVolume());
+            bufferedWriter.newLine();
+        }
+        if (reference.getPublisher() != null) {
+            bufferedWriter.write("PB  - " + reference.getPublisher());
+            bufferedWriter.newLine();
+        }
+        if (reference.getAddress() != null) {
+            bufferedWriter.write(ad + reference.getAddress());
+        }
+        if (reference.getPages() != null) {
+            bufferedWriter.write("SP  - " + reference.getPages());
+        }
+        closeReference(bufferedWriter);
+    }
+
+    private void writeWebPage(final WebPage reference, final BufferedWriter bufferedWriter) throws IOException {
+
+        bufferedWriter.write("TY  - ELEC");
+        commonField(reference, bufferedWriter);
+        writePersonList(reference.getAuthorList(), bufferedWriter, "AU");
+
+        if (reference.getTitle() != null) {
+            bufferedWriter.write(ti + reference.getTitle());
+            bufferedWriter.newLine();
+        }
+        if (reference.getDate() != null) {
+            if (reference.getDate().getMonthValue() == 1 && reference.getDate().getDayOfMonth() == 2) {
+                bufferedWriter.write("C2  - " + reference.getDate().getYear() + "/" + reference.getDate().getMonthValue());
+            } else {
+                bufferedWriter.write("C2  - " + reference.getDate().getYear());
+            }
+            bufferedWriter.newLine();
+        }
+        if (reference.getAccessDate() != null) {
+            if (reference.getAccessDate().getMonthValue() == 1 && reference.getAccessDate().getDayOfMonth() == 2) {
+                bufferedWriter.write("M1  - " + reference.getAccessDate().getYear() + "/" + reference.getAccessDate().getMonthValue());
+            } else {
+                bufferedWriter.write("M1  - " + reference.getAccessDate().getYear());
+            }
+            bufferedWriter.newLine();
+        }
+        if (reference.getUrl() != null) {
+            bufferedWriter.write("UR  - " + reference.getUrl());
+            bufferedWriter.newLine();
+        }
+
         closeReference(bufferedWriter);
     }
 }
