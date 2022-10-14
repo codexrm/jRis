@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f862d616-df68-4b93-b091-91a484f6c863" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/BookSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/BookSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Export.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Export.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Import.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Import.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/JournalArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/JournalArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/RisManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/RisManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Thesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/Thesis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/codexrm/jris/RisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferencePaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/ConferencePaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/codexrm/jris/WebPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
