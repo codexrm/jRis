@@ -18,6 +18,10 @@ public class WebPage extends BaseReference  {
 
     public ArrayList<String> getAuthorList() { return authorList; }
 
+    public void setAuthor(final String author) {
+        this.authorList.add(author);
+    }
+
     public String getTitle() { return title; }
 
     public void setTitle(final String title) { this.title = title; }

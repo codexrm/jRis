@@ -72,9 +72,9 @@ public class Import {
         }
     }
 
-    private boolean isNumero(final String numero) {
+    private boolean isNumber(final String number) {
         try {
-            Long.valueOf(numero);
+            Long.valueOf(number);
             return true;
 
         } catch (final NumberFormatException e) {
@@ -83,7 +83,7 @@ public class Import {
     }
 
     private String validateYear(final String year) {
-        if (isNumero(year)) {
+        if (isNumber(year)) {
             final char[] charYear = year.toCharArray();
             switch (charYear.length) {
                 case 1:
@@ -101,7 +101,7 @@ public class Import {
     }
 
     private String validateMonth(String month) {
-        if (isNumero(month)) {
+        if (isNumber(month)) {
             final char[] charMonth = month.toCharArray();
             if (charMonth.length == 1) {
                 month = "0" + month;
@@ -155,6 +155,12 @@ public class Import {
                     break;
                 case "CONF":
                     reference = createConferenceProceedings(listPartLine);
+                    break;
+                case "CPAPER":
+                    reference = createConferencePaper(listPartLine);
+                    break;
+                case "ELEC":
+                    reference = createWebPage(listPartLine);
                     break;
                 default:
                     reference = null;
@@ -386,5 +392,83 @@ public class Import {
             }
         }
         return proceedings;
+    }
+
+    private BaseReference createConferencePaper(final ArrayList<String[]> listPartLine) {
+        final ConferencePaper paper = new ConferencePaper();
+        for (int i = 1; i < listPartLine.size(); i++) {
+            String field = listPartLine.get(i)[0];
+            String content = listPartLine.get(i)[1];
+            field = field.trim();
+            content = content.trim();
+
+            switch (field) {
+                case "AU":
+                    paper.setAuthor(content);
+                    break;
+                case "A2":
+                    paper.setEditor(content);
+                    break;
+                case "TI":
+                    paper.setTitle(content);
+                    break;
+                case "PY":
+                case "DA":
+                    paper.setDate(establishDate(content));
+                    break;
+                case "N1":
+                    paper.setNotes(content);
+                    break;
+                case "VL":
+                    paper.setVolume(content);
+                    break;
+                case "PB":
+                    paper.setPublisher(content);
+                    break;
+                case "SP":
+                    paper.setPages(content);
+                    break;
+                case "AD":
+                    paper.setAddress(content);
+                    break;
+                default:
+            }
+        }
+        return paper;
+    }
+
+    private BaseReference createWebPage(final ArrayList<String[]> listPartLine) {
+        final WebPage webPage = new WebPage();
+        for (int i = 1; i < listPartLine.size(); i++) {
+            String field = listPartLine.get(i)[0];
+            String content = listPartLine.get(i)[1];
+            field = field.trim();
+            content = content.trim();
+
+            switch (field) {
+                case "AU":
+                    webPage.setAuthor(content);
+                    break;
+                case "TI":
+                    webPage.setTitle(content);
+                    break;
+                case "C2":
+                case "C1":
+                    webPage.setDate(establishDate(content));
+                    break;
+                case "N1":
+                    webPage.setNotes(content);
+                    break;
+                case "M1":
+                case "VL":
+                    webPage.setAccessDate(establishDate(content));
+                    break;
+                case "UR":
+                    webPage.setUrl(content);
+                    break;
+                default:
+            }
+        }
+        return webPage;
     }
 }

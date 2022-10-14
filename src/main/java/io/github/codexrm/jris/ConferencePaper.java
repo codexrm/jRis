@@ -22,7 +22,15 @@ public class ConferencePaper extends BaseReference {
 
     public ArrayList<String> getAuthorList() { return authorList; }
 
+    public void setAuthor(final String author) {
+        this.authorList.add(author);
+    }
+
     public ArrayList<String> getEditorList() { return editorList; }
+
+    public void setEditor(final String editor) {
+        this.editorList.add(editor);
+    }
 
     public String getTitle() { return title; }
 
