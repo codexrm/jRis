@@ -57,10 +57,13 @@ public class Export {
                 break;
             case "ConferenceProceedings":
                 writeConferenceProceedings((ConferenceProceedings) reference, bufferedWriter);
+                break;
             case "ConferencePaper":
                 writeConferencePaper((ConferencePaper) reference, bufferedWriter);
+                break;
             case "WebPage":
                 writeWebPage((WebPage) reference, bufferedWriter);
+                break;
             default:
         }
 
@@ -326,6 +329,7 @@ public class Export {
         }
         if (reference.getAddress() != null) {
             bufferedWriter.write(ad + reference.getAddress());
+            bufferedWriter.newLine();
         }
         if (reference.getPages() != null) {
             bufferedWriter.write("SP  - " + reference.getPages());
@@ -361,7 +365,6 @@ public class Export {
         }
         if (reference.getUrl() != null) {
             bufferedWriter.write("UR  - " + reference.getUrl());
-            bufferedWriter.newLine();
         }
 
         closeReference(bufferedWriter);

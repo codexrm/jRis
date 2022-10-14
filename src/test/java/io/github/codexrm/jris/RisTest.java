@@ -17,7 +17,9 @@ class RisTest {
     private final Book book = new Book();
     private final BookSection section = new BookSection();
     private final Thesis thesis = new Thesis();
-    private final ConferenceProceedings conference = new ConferenceProceedings();
+    private final ConferenceProceedings proceedings = new ConferenceProceedings();
+    private final ConferencePaper paper = new ConferencePaper();
+    private final WebPage webPage = new WebPage();
 
     @Test
     void addReference() {
@@ -68,18 +70,37 @@ class RisTest {
         thesis.setAddress("ave61");
         manager.addReference(thesis);
 
-        conference.setAuthor("Nunnez,Roberto");
-        conference.setEditor("Gil,Marcos");
-        conference.setSeriesEditor("Navarro,Luis");
-        conference.setTitle("The men");
-        conference.setDate(LocalDate.of(2020, 8, 1));
-        conference.setNotes("ee");
-        conference.setVolume("vol34");
-        conference.setSerie("x13");
-        conference.setAddress("ave76,no87");
-        manager.addReference(conference);
+        proceedings.setAuthor("Nunnez,Roberto");
+        proceedings.setEditor("Gil,Marcos");
+        proceedings.setSeriesEditor("Navarro,Luis");
+        proceedings.setTitle("The men");
+        proceedings.setDate(LocalDate.of(2020, 8, 1));
+        proceedings.setNotes("ee");
+        proceedings.setVolume("vol34");
+        proceedings.setSerie("x13");
+        proceedings.setAddress("ave76,no87");
+        manager.addReference(proceedings);
 
-        Assertions.assertEquals(5, manager.getReferenceList().size());
+        paper.setAuthor("Ruben,Sanchez");
+        paper.setEditor("Palacio,Gil");
+        paper.setTitle("Primeface");
+        paper.setDate(LocalDate.of(2021, 6, 1));
+        paper.setNotes("gg");
+        paper.setVolume("1");
+        paper.setPages("20");
+        paper.setAddress("Venecia,Italia");
+        paper.setPublisher("Palt");
+        manager.addReference(paper);
+
+        webPage.setAuthor("Lopez,Coral");
+        webPage.setTitle("Java FX");
+        webPage.setDate(LocalDate.of(2020, 8, 1));
+        webPage.setAccessDate(LocalDate.now());
+        webPage.setNotes("ff");
+        webPage.setUrl("http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/");
+        manager.addReference(webPage);
+
+        Assertions.assertEquals(7, manager.getReferenceList().size());
 
         try {
             final Path pathExportListReference = Paths.get("testFile", "export.txt");
@@ -88,14 +109,14 @@ class RisTest {
 
             final ArrayList<BaseReference> listExport = manager.importReferences(readerExport);
 
-            Assertions.assertEquals(5, listExport.size());
+            Assertions.assertEquals(7, listExport.size());
 
             final Path pathImportListReference = Paths.get("testFile", "importRis.txt");
             final Reader reader = new FileReader(pathImportListReference.toString());
 
             final ArrayList<BaseReference> list = manager.importReferences(reader);
 
-            Assertions.assertEquals(5, list.size());
+            Assertions.assertEquals(7, list.size());
 
         } catch (final IOException e) {
             // TODO Auto-generated catch block

@@ -64,3 +64,23 @@ VL  - vol30
 IS  - 2
 SP  - 10
 ER  - 
+
+TY  - CPAPER
+N1  - mm
+AU  - Acosta,Manuel
+A2  - Palacio,Luis
+TI  - La Atmosfera
+DA  - 2012
+VL  - 2
+PB  - Hall
+AD  - La Habana, Cuba
+SP  - 32
+ER  - 
+TY  - ELEC
+N1  - qq
+AU  - Lopez,Daniela
+TI  - Java, C++
+C2  - 2020
+M1  - 2022
+UR  - http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/
+ER  - 

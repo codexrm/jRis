@@ -56,3 +56,22 @@ VL  - vol34
 T3  - x13
 AD  - ave76,no87
 ER  - 
+TY  - CPAPER
+N1  - gg
+AU  - Ruben,Sanchez
+A2  - Palacio,Gil
+TI  - Primeface
+DA  - 2021
+VL  - 1
+PB  - Palt
+AD  - Venecia,Italia
+SP  - 20
+ER  - 
+TY  - ELEC
+N1  - ff
+AU  - Lopez,Coral
+TI  - Java FX
+C2  - 2020
+M1  - 2022
+UR  - http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/
+ER  - 
