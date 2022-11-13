@@ -20,41 +20,43 @@
 -docencoding
 'UTF-8'
 -doctitle
-'jRis 0.0.1-SNAPSHOT API'
+'jRis 1.2.0-SNAPSHOT API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' 'D:/Proyecto/jRis/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'jRis 0.0.1-SNAPSHOT API'
+'jRis 1.2.0-SNAPSHOT API'
 io.github.codexrm.jris
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/BaseReference.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Book.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/BookSection.java'
+'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/ConferencePaper.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Export.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Import.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/JournalArticle.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/RisManager.java'
 'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Thesis.java'
+'D:/Proyecto/jRis/src/main/java/io/github/codexrm/jris/WebPage.java'
 C:\Users\mary\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar = 1642268544616
 D:\Proyecto\jRis\src\main\java = 1642015005787
-D:\Proyecto\jRis\target\apidocs\allclasses-index.html = 1649711061093
-D:\Proyecto\jRis\target\apidocs\allclasses.html = 1649711061137
-D:\Proyecto\jRis\target\apidocs\allpackages-index.html = 1649711061106
-D:\Proyecto\jRis\target\apidocs\constant-values.html = 1649711060816
-D:\Proyecto\jRis\target\apidocs\deprecated-list.html = 1649711061132
-D:\Proyecto\jRis\target\apidocs\element-list = 1649711060766
-D:\Proyecto\jRis\target\apidocs\help-doc.html = 1649711061146
-D:\Proyecto\jRis\target\apidocs\index-all.html = 1649711061079
-D:\Proyecto\jRis\target\apidocs\index.html = 1649711061140
-D:\Proyecto\jRis\target\apidocs\member-search-index.js = 1649711061070
-D:\Proyecto\jRis\target\apidocs\member-search-index.zip = 1649711061074
-D:\Proyecto\jRis\target\apidocs\overview-tree.html = 1649711061007
-D:\Proyecto\jRis\target\apidocs\package-search-index.js = 1649711061055
-D:\Proyecto\jRis\target\apidocs\package-search-index.zip = 1649711061062
-D:\Proyecto\jRis\target\apidocs\script.js = 1649711061165
-D:\Proyecto\jRis\target\apidocs\search.js = 1649711061213
-D:\Proyecto\jRis\target\apidocs\stylesheet.css = 1649711061161
-D:\Proyecto\jRis\target\apidocs\type-search-index.js = 1649711061064
-D:\Proyecto\jRis\target\apidocs\type-search-index.zip = 1649711061067
+D:\Proyecto\jRis\target\apidocs\allclasses-index.html = 1668364878997
+D:\Proyecto\jRis\target\apidocs\allclasses.html = 1668364879031
+D:\Proyecto\jRis\target\apidocs\allpackages-index.html = 1668364879010
+D:\Proyecto\jRis\target\apidocs\constant-values.html = 1668364878741
+D:\Proyecto\jRis\target\apidocs\deprecated-list.html = 1668364879017
+D:\Proyecto\jRis\target\apidocs\element-list = 1668364878696
+D:\Proyecto\jRis\target\apidocs\help-doc.html = 1668364879038
+D:\Proyecto\jRis\target\apidocs\index-all.html = 1668364878984
+D:\Proyecto\jRis\target\apidocs\index.html = 1668364879034
+D:\Proyecto\jRis\target\apidocs\member-search-index.js = 1668364878959
+D:\Proyecto\jRis\target\apidocs\member-search-index.zip = 1668364878962
+D:\Proyecto\jRis\target\apidocs\overview-tree.html = 1668364878873
+D:\Proyecto\jRis\target\apidocs\package-search-index.js = 1668364878929
+D:\Proyecto\jRis\target\apidocs\package-search-index.zip = 1668364878935
+D:\Proyecto\jRis\target\apidocs\script.js = 1668364879058
+D:\Proyecto\jRis\target\apidocs\search.js = 1668364879110
+D:\Proyecto\jRis\target\apidocs\stylesheet.css = 1668364879055
+D:\Proyecto\jRis\target\apidocs\type-search-index.js = 1668364878937
+D:\Proyecto\jRis\target\apidocs\type-search-index.zip = 1668364878939
