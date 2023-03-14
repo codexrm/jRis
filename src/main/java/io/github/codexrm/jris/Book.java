@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -16,12 +15,14 @@ public class Book extends BaseReference {
     private final ArrayList<String> editorList;
     private final ArrayList<String> seriesEditorList;
     private String title;
-    private LocalDate date;
     private String publisher;
+    private String year;
     private String volume;
+    private String number;
     private String series;
     private String address;
     private String edition;
+    private String isbn;
 
 
     public Book() {
@@ -101,24 +102,6 @@ public class Book extends BaseReference {
      */
     public void setTitle(final String title) {
         this.title = title;
-    }
-
-    /**
-     * Gets the book’s date.
-     *
-     * @return the book’s date.
-     */
-    public LocalDate getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the book’s date.
-     *
-     * @param date A LocalDate containing the book’s date.
-     */
-    public void setDate(final LocalDate date) {
-        this.date = date;
     }
 
     /**
@@ -210,4 +193,46 @@ public class Book extends BaseReference {
     public void setEdition(final String edition) {
         this.edition = edition;
     }
+
+    /**
+     * Gets the book’s year.
+     *
+     * @return the book’s year.
+     */
+    public String getYear() { return year; }
+
+    /**
+     * Sets the book’s year.
+     *
+     * @param year A String containing the book’s year.
+     */
+    public void setYear(final String year) { this.year = year; }
+
+    /**
+     * Gets the book’s number.
+     *
+     * @return the book’s number.
+     */
+    public String getNumber() { return number; }
+
+    /**
+     * Sets the book’s number.
+     *
+     * @param number A String containing the book’s number.
+     */
+    public void setNumber(final String number) { this.number = number; }
+
+    /**
+     * Gets the book’s isbn.
+     *
+     * @return the book’s isbn.
+     */
+    public String getIsbn() { return isbn; }
+
+    /**
+     * Sets the book’s isbn.
+     *
+     * @param isbn A String containing the book’s isbn.
+     */
+    public void setIsbn(final String isbn) { this.isbn = isbn; }
 }

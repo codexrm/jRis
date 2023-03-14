@@ -16,10 +16,12 @@ public class ConferenceProceedings extends BaseReference {
     private final ArrayList<String> editorList;
     private final ArrayList<String> seriesEditorList;
     private String title;
-    private LocalDate date;
+    private String year;
     private String volume;
+    private String number;
     private String series;
     private String address;
+    private String publisher;
 
     public ConferenceProceedings() {
         super();
@@ -101,24 +103,6 @@ public class ConferenceProceedings extends BaseReference {
     }
 
     /**
-     * Gets the conferenceProceedings’s date.
-     *
-     * @return the conferenceProceedings’s date.
-     */
-    public LocalDate getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the conferenceProceedings’s date.
-     *
-     * @param date A LocalDate containing the conferenceProceedings’s date.
-     */
-    public void setDate(final LocalDate date) {
-        this.date = date;
-    }
-
-    /**
      * Gets the conferenceProceedings’s volume.
      *
      * @return the conferenceProceedings’s volume.
@@ -171,4 +155,46 @@ public class ConferenceProceedings extends BaseReference {
     public void setAddress(final String address) {
         this.address = address;
     }
+
+    /**
+     * Gets the conferenceProceedings’s year.
+     *
+     * @return the conferenceProceedings’s year.
+     */
+    public String getYear() { return year; }
+
+    /**
+     * Sets the conferenceProceedings’s year.
+     *
+     * @param year A String containing the conferenceProceedings’s year.
+     */
+    public void setYear(final String year) { this.year = year; }
+
+    /**
+     * Gets the conferenceProceedings’s number.
+     *
+     * @return the conferenceProceedings’s number.
+     */
+    public String getNumber() { return number; }
+
+    /**
+     * Sets the conferenceProceedings’s number.
+     *
+     * @param number A String containing the conferenceProceedings’s number.
+     */
+    public void setNumber(final String number) { this.number = number; }
+
+    /**
+     * Gets the conferenceProceedings’s publisher.
+     *
+     * @return the conferenceProceedings’s publisher.
+     */
+    public String getPublisher() { return publisher; }
+
+    /**
+     * Sets the conferenceProceedings’s publisher.
+     *
+     * @param publisher A String containing the conferenceProceedings’s publisher.
+     */
+    public void setPublisher(final String publisher) { this.publisher = publisher; }
 }

@@ -1,14 +1,13 @@
 uuuuuuu
 TY  - CONF
-AU  - Nunnez,Roberto
 A2  - Montaner,Luis
-A3  - Alfonso,Jose
 TI  - The woman
-DA  - 202/07
+PY  - 202
 N1  - nn
-VL  - vol.5
-T3  - 2x
-AD  - 4202
+VL  - 6
+NV  - 5
+T3  - PLG
+AD  - Florencia,Colombia
 ER  - 
 TY  - GEN
 AU  - Torres-Nunnez,Roberto
@@ -19,13 +18,13 @@ PB  - NO SE
 AD  - ave45,no76
 ER  - 
 TY  - THES
-AU  - Diaz-Nunnez,Marynes
+AU  - Dia,Marynes
 TI  - Reference
-DA  - 8/01
+PY  - 01
 N1  - jj
 PB  - Fructuoso Rodriguez
 M3  - Masters
-AD  - ave65
+AD  - Mayabeque,Cuba
 ER  - 
 TY  - CHAP
 AU  - Gomez,Mario
@@ -35,52 +34,35 @@ TI  - plan x
 PY  - 2019
 N1  - mm
 PB  - Education
-VL  - vol1
-T3  - 4
-AD  - no76
-ET  - Maria Elena B.
-EP  - II
+VL  - 1
+T3  - QWER
+AD  - Caracas,Venezuela
+ET  - 3
+SN  - 6985-4583
+SE  - 3
 SP  - 12
 ER  - 
 TY  - BOOK
 AU  - Borges,Juan
 A2  - Gil,Camilo
 TI  - Plan B
-DA  - 2018/12
+PY  - 2018
 N1  - XX
 PB  - Prencite Hall
-VL  - vol3
-T2  - xx8
-AD  - ave51
-ET  - Maria Elena B.
+VL  - 3
+T2  - MLD
+AD  - Quito,Ecuador
+ET  - 9
 ER  - 
 TY  - JOUR
 AU  - Gomez,Mario
 TI  - Complexity
-DA  - 2020/04
+PY  - 2020
 N1  - zz
 JO  - Science
-VL  - vol30
-IS  - 2
+VL  - 4
+C7  - 2
 SP  - 10
 ER  - 
 
-TY  - CPAPER
-N1  - mm
-AU  - Acosta,Manuel
-A2  - Palacio,Luis
-TI  - La Atmosfera
-DA  - 2012
-VL  - 2
-PB  - Hall
-AD  - La Habana, Cuba
-SP  - 32
-ER  - 
-TY  - ELEC
-N1  - qq
-AU  - Lopez,Daniela
-TI  - Java, C++
-C2  - 2020
-M1  - 2022
-UR  - http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/
-ER  - 
+

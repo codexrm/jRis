@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +13,7 @@ public class Thesis extends BaseReference {
 
     private final ArrayList<String> authorList;
     private String title;
-    private LocalDate date;
+    private String year;
     private String school;
     private String type;
     private String address;
@@ -61,22 +60,32 @@ public class Thesis extends BaseReference {
     }
 
     /**
-     * Gets the thesis’s date.
+     * Gets the thesis’s year.
      *
-     * @return the thesis’s date.
+     * @return the thesis’s year.
      */
-    public LocalDate getDate() {
-        return date;
-    }
+    public String getYear() { return year; }
 
     /**
-     * Sets the thesis’s date.
+     * Sets the thesis’s year.
      *
-     * @param date A LocalDate containing the thesis’s date.
+     * @param year A String containing the thesis’s year.
      */
-    public void setDate(final LocalDate date) {
-        this.date = date;
-    }
+    public void setYear(final String year) { this.year = year; }
+
+    /**
+     * Gets the thesis’s type.
+     *
+     * @return the thesis’s type.
+     */
+    public String getType() { return type; }
+
+    /**
+     * Sets the thesis’s type.
+     *
+     * @param type A String containing the thesis’s type.
+     */
+    public void setType(final String type) { this.type = type; }
 
     /**
      * Gets the thesis’s school.
@@ -94,24 +103,6 @@ public class Thesis extends BaseReference {
      */
     public void setSchool(final String school) {
         this.school = school;
-    }
-
-    /**
-     * Gets the thesis’s type.
-     *
-     * @return the thesis’s type.
-     */
-    public String getThesisType() {
-        return type;
-    }
-
-    /**
-     * Sets the thesis’s type.
-     *
-     * @param type A String containing the thesis’s type.
-     */
-    public void setThesisType(final String type) {
-        this.type = type;
     }
 
     /**

@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -14,11 +13,12 @@ public class JournalArticle extends BaseReference {
 
     private final ArrayList<String> authorList;
     private String title;
-    private LocalDate date;
     private String journal;
+    private String year;
     private String volume;
     private String number;
     private String pages;
+    private String issn;
 
 
     public JournalArticle() {
@@ -62,23 +62,6 @@ public class JournalArticle extends BaseReference {
         this.title = title;
     }
 
-    /**
-     * Gets the journalArticle’s date.
-     *
-     * @return the journalArticle’s date.
-     */
-    public LocalDate getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the journalArticle’s date.
-     *
-     * @param date A LocalDate containing the journalArticle’s date.
-     */
-    public void setDate(final LocalDate date) {
-        this.date = date;
-    }
 
     /**
      * Gets the journalArticle’s journal.
@@ -151,4 +134,32 @@ public class JournalArticle extends BaseReference {
     public void setPages(final String pages) {
         this.pages = pages;
     }
+
+    /**
+     * Gets the journalArticle’s year.
+     *
+     * @return the journalArticle’s year.
+     */
+    public String getYear() { return year; }
+
+    /**
+     * Sets the journalArticle’s year.
+     *
+     * @param year A String containing the journalArticle’s year.
+     */
+    public void setYear(final String year) { this.year = year; }
+
+    /**
+     * Gets the journalArticle’s issn.
+     *
+     * @return the journalArticle’s issn.
+     */
+    public String getIssn() { return issn; }
+
+    /**
+     * Sets the journalArticle’s issn.
+     *
+     * @param issn A String containing the journalArticle’s issn.
+     */
+    public void setIssn(final String issn) { this.issn = issn; }
 }

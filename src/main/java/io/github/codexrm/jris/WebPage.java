@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +13,8 @@ public class WebPage extends BaseReference  {
 
     private final ArrayList<String> authorList;
     private String title;
-    private LocalDate date;
-    private LocalDate accessDate;
+    private String year;
+    private String accessYear;
     private String url;
 
     public WebPage() {
@@ -54,32 +53,32 @@ public class WebPage extends BaseReference  {
     public void setTitle(final String title) { this.title = title; }
 
     /**
-     * Gets the webPage’s date.
+     * Gets the webPage’s year.
      *
-     * @return the webPage’s date.
+     * @return the webPage’s year.
      */
-    public LocalDate getDate() { return date; }
+    public String getYear() { return year; }
 
     /**
-     * Sets the webPage’s date.
+     * Sets the webPage’s year.
      *
-     * @param date A LocalDate containing the webPage’s date.
+     * @param year A String containing the webPage’s year.
      */
-    public void setDate(final LocalDate date) { this.date = date; }
+    public void setYear(final String year) { this.year = year; }
 
     /**
-     * Gets the webPage’s accessDate.
+     * Gets the webPage’s accessYear.
      *
-     * @return the webPage’s accessDate.
+     * @return the webPage’s accessYear.
      */
-    public LocalDate getAccessDate() { return accessDate; }
+    public String getAccessYear() { return accessYear; }
 
     /**
-     * Sets the webPage’s accessDate.
+     * Sets the webPage’s accessYear.
      *
-     * @param accessDate A LocalDate containing the webPage’s accessDate.
+     * @param accessYear A LocalDate containing the webPage’s accessYear.
      */
-    public void setAccessDate(final LocalDate accessDate) { this.accessDate = accessDate; }
+    public void setAccessYear(final String accessYear) { this.accessYear = accessYear; }
 
     /**
      * Gets the webPage’s url.

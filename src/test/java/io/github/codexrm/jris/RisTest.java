@@ -25,68 +25,75 @@ class RisTest {
     @Test
     void addReference() {
 
-        article.setTitle("project of education");
-        article.setDate(LocalDate.of(2008, 3, 1));
+        article.setTitle("Proyecto de educacion");
+        article.setYear("2003");
         article.setNotes("aa");
-        article.setJournal("Sciences and education");
-        article.setVolume("vol132");
-        article.setNumber("no3443");
-        article.setPages("p1011");
-        article.setAuthor("Martin-Gonzalez,Jacob");
+        article.setJournal("Ciencia y educacion");
+        article.setVolume("2");
+        article.setNumber("3");
+        article.setPages("10");
+        article.setIssn("333582-285452");
+        article.setAuthor("Martin,Jacob");
         manager.addReference(article);
 
-        book.setTitle("relations and your career");
-        book.setDate(LocalDate.of(1987, 4, 1));
+        book.setTitle("Relacion de las carreras");
+        book.setYear("2021");
         book.setNotes("bb");
-        book.setAuthor("Navarro-Gener,Enrique");
-        book.setEditor("Martin-Gonzalez,Jacob");
+        book.setAuthor("Navarro,Enrique");
+        book.setEditor("Martin,Jacob");
         book.setSerieEditor("Diaz,Camilo");
         book.setPublisher("Prencite Hall");
-        book.setVolume("vol35");
-        book.setSeries("xx7");
-        book.setAddress("ave67 no02");
-        book.setEdition("I");
+        book.setVolume("5");
+        book.setNumber("2");
+        book.setSeries("LCDT");
+        book.setAddress("New York");
+        book.setEdition("1");
+        book.setIsbn("12396-8125");
         manager.addReference(book);
 
-        section.setAuthor("Fernadez-Diaz,Maria");
-        section.setEditor("Martin-Gonzalez,Jacob");
-        section.setSeriesEditor("Fernadez-Diaz,Maria");
-        section.setTitle("introduction to Windows");
-        section.setDate(LocalDate.of(2012, 1, 1));
+        section.setAuthor("Diaz,Maria");
+        section.setEditor("Martin,Jacob");
+        section.setSeriesEditor("Fernadez,Maria");
+        section.setTitle("Introduccion a Windows");
+        section.setYear("2012");
         section.setNotes("cc");
-        section.setPublisher("Education");
-        section.setVolume("vol35");
-        section.setSeries("ja4");
-        section.setAddress("ave 76 no74");
-        section.setEdition("II");
-        section.setChapter("I");
-        section.setPages("1234");
+        section.setPublisher("Educacion");
+        section.setVolume("3");
+        section.setSeries("JAS");
+        section.setNumber("1");
+        section.setAddress("Barcelona,España");
+        section.setEdition("1");
+        section.setChapter("2");
+        section.setPages("30");
+        section.setIsbn("666658-8125");
         manager.addReference(section);
 
-        thesis.setAuthor("Navarro-Gener,Enrique");
-        thesis.setTitle("Reference");
-        thesis.setDate(LocalDate.of(2019, 5, 1));
+        thesis.setAuthor("Navarro,Enrique");
+        thesis.setTitle("Referencias Bibliograficas");
+        thesis.setYear("2019");
         thesis.setNotes("dd");
-        thesis.setSchool("Cespedes");
-        thesis.setThesisType("phd");
-        thesis.setAddress("ave61");
+        thesis.setSchool("Universidad Agraria de La Habana");
+        thesis.setType("phd");
+        thesis.setAddress("Mayabeque,Cuba");
         manager.addReference(thesis);
 
         proceedings.setAuthor("Nunnez,Roberto");
         proceedings.setEditor("Gil,Marcos");
         proceedings.setSeriesEditor("Navarro,Luis");
-        proceedings.setTitle("The men");
-        proceedings.setDate(LocalDate.of(2020, 8, 1));
+        proceedings.setTitle("El hombre");
+        proceedings.setYear("2020");
         proceedings.setNotes("ee");
-        proceedings.setVolume("vol34");
-        proceedings.setSeries("x13");
-        proceedings.setAddress("ave76,no87");
+        proceedings.setVolume("3");
+        proceedings.setPublisher("Halt");
+        proceedings.setNumber("1");
+        proceedings.setSeries("LKJ");
+        proceedings.setAddress("Guayaquil,Ecuador");
         manager.addReference(proceedings);
 
         paper.setAuthor("Ruben,Sanchez");
         paper.setEditor("Palacio,Gil");
         paper.setTitle("Primeface");
-        paper.setDate(LocalDate.of(2021, 6, 1));
+        paper.setYear("2021");
         paper.setNotes("gg");
         paper.setVolume("1");
         paper.setPages("20");
@@ -96,8 +103,8 @@ class RisTest {
 
         webPage.setAuthor("Lopez,Coral");
         webPage.setTitle("Java FX");
-        webPage.setDate(LocalDate.of(2020, 8, 1));
-        webPage.setAccessDate(LocalDate.now());
+        webPage.setYear("2020");
+        webPage.setAccessYear("2023");
         webPage.setNotes("ff");
         webPage.setUrl("http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/");
         manager.addReference(webPage);
@@ -118,7 +125,7 @@ class RisTest {
 
             final ArrayList<BaseReference> list = manager.importReferences(reader);
 
-            Assertions.assertEquals(7, list.size());
+            Assertions.assertEquals(5, list.size());
 
         } catch (final IOException e) {
             // TODO Auto-generated catch block

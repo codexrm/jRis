@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-
 import lombok.NonNull;
 
 import java.io.FileWriter;
@@ -8,7 +7,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
-
 
 /**
  * Represents the Manager class

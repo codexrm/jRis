@@ -1,67 +1,74 @@
 TY  - JOUR
 N1  - aa
-AU  - Martin-Gonzalez,Jacob
-TI  - project of education
-DA  - 2008
-T2  - Sciences and education
-VL  - vol132
-C7  - no3443
-M2  - p1011
+AU  - Martin,Jacob
+TI  - Proyecto de educacion
+T2  - Ciencia y educacion
+PY  - 2003
+VL  - 2
+C7  - 3
+SN  - 333582-285452
+SP  - 10
 ER  - 
 TY  - BOOK
 N1  - bb
-AU  - Navarro-Gener,Enrique
-A3  - Martin-Gonzalez,Jacob
+AU  - Navarro,Enrique
+A3  - Martin,Jacob
 A2  - Diaz,Camilo
-TI  - relations and your career
-DA  - 1987
+TI  - Relacion de las carreras
 PB  - Prencite Hall
-VL  - vol35
-AD  - ave67 no02
-ET  - I
-T2  - xx7
+PY  - 2021
+VL  - 5
+NV  - 2
+AD  - New York
+ET  - 1
+SN  - 12396-8125
+T2  - LCDT
 ER  - 
 TY  - CHAP
 N1  - cc
-AU  - Fernadez-Diaz,Maria
-A2  - Martin-Gonzalez,Jacob
-A3  - Fernadez-Diaz,Maria
-TI  - introduction to Windows
+AU  - Diaz,Maria
+A2  - Martin,Jacob
+A3  - Fernadez,Maria
+TI  - Introduccion a Windows
+PB  - Educacion
 PY  - 2012
-PB  - Education
-VL  - vol35
-AD  - ave 76 no74
-ET  - II
-T3  - ja4
-SE  - I
-SP  - 1234
+IS  - 1
+VL  - 3
+AD  - Barcelona,España
+ET  - 1
+T3  - JAS
+SE  - 2
+SN  - 666658-8125
+SP  - 30
 ER  - 
 TY  - THES
 N1  - dd
-AU  - Navarro-Gener,Enrique
-TI  - Reference
-DA  - 2019
-PB  - Cespedes
+AU  - Navarro,Enrique
+TI  - Referencias Bibliograficas
+PB  - Universidad Agraria de La Habana
+PY  - 2019
 M3  - phd
-AD  - ave61
+AD  - Mayabeque,Cuba
 ER  - 
 TY  - CONF
 N1  - ee
 AU  - Nunnez,Roberto
 A2  - Gil,Marcos
 A3  - Navarro,Luis
-TI  - The men
-DA  - 2020
-VL  - vol34
-T3  - x13
-AD  - ave76,no87
+TI  - El hombre
+C2  - 2020
+VL  - 3
+PB  - Halt
+NV  - 1
+T3  - LKJ
+AD  - Guayaquil,Ecuador
 ER  - 
 TY  - CPAPER
 N1  - gg
 AU  - Ruben,Sanchez
 A2  - Palacio,Gil
 TI  - Primeface
-DA  - 2021
+PY  - 2021
 VL  - 1
 PB  - Palt
 AD  - Venecia,Italia
@@ -71,7 +78,7 @@ TY  - ELEC
 N1  - ff
 AU  - Lopez,Coral
 TI  - Java FX
-C2  - 2020
-M1  - 2022
+PY  - 2020
+VL  - 2023
 UR  - http://blog.buildpath.de/javafx-decouple-the-view-and-its-behavior-to-create-a-testable-ui/
 ER  - 

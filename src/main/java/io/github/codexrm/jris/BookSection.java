@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -16,14 +15,16 @@ public class BookSection extends BaseReference {
     private final ArrayList<String> editorList;
     private final ArrayList<String> seriesEditorList;
     private String title;
-    private LocalDate date;
     private String chapter;
+    private String year;
     private String pages;
     private String series;
     private String publisher;
     private String volume;
     private String address;
     private String edition;
+    private String number;
+    private String isbn;
 
 
     public BookSection() {
@@ -103,24 +104,6 @@ public class BookSection extends BaseReference {
      */
     public void setTitle(final String title) {
         this.title = title;
-    }
-
-    /**
-     * Gets the bookSection’s date.
-     *
-     * @return the book’s date.
-     */
-    public LocalDate getDate() {
-        return date;
-    }
-
-    /**
-     * Sets the bookSection’s date.
-     *
-     * @param date A LocalDate containing the bookSection’s date.
-     */
-    public void setDate(final LocalDate date) {
-        this.date = date;
     }
 
     /**
@@ -248,4 +231,46 @@ public class BookSection extends BaseReference {
     public void setEdition(final String edition) {
         this.edition = edition;
     }
+
+    /**
+     * Gets the bookSection’s year.
+     *
+     * @return the book’s year.
+     */
+    public String getYear() { return year; }
+
+    /**
+     * Sets the bookSection’s year.
+     *
+     * @param year A String containing the bookSection’s year.
+     */
+    public void setYear(final String year) { this.year = year; }
+
+    /**
+     * Gets the bookSection’s number.
+     *
+     * @return the book’s number.
+     */
+    public String getNumber() { return number; }
+
+    /**
+     * Sets the bookSection’s number.
+     *
+     * @param number A String containing the bookSection’s number.
+     */
+    public void setNumber(final String number) { this.number = number; }
+
+    /**
+     * Gets the bookSection’s isbn.
+     *
+     * @return the book’s isbn.
+     */
+    public String getIsbn() { return isbn; }
+
+    /**
+     * Sets the bookSection’s isbn.
+     *
+     * @param isbn A String containing the bookSection’s isbn.
+     */
+    public void setIsbn(final String isbn) { this.isbn = isbn; }
 }

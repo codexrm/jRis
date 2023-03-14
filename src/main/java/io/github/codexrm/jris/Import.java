@@ -3,8 +3,6 @@ package io.github.codexrm.jris;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -103,36 +101,6 @@ public class Import {
         } else return null;
     }
 
-    private String validateMonth(String month) {
-
-        if (isNumber(month)) {
-            final char[] charMonth = month.toCharArray();
-            if (charMonth.length == 1) {
-                month = "0" + month;
-            } else {
-                if (charMonth.length > 2) {
-                    return null;
-                }
-            }
-            return month;
-        } else return null;
-    }
-
-    private LocalDate establishDate(String importedDate) {
-
-        importedDate = importedDate.strip();
-        final String[] fullDate = importedDate.split("/", 2);
-        if (fullDate.length == 2) {
-            final String year = validateYear(fullDate[0]);
-            final String month = validateMonth(fullDate[1]);
-            importedDate = year + "/" + month + "/01";
-        } else if (fullDate.length == 1) {
-            final String year = validateYear(fullDate[0]);
-            importedDate = year + "/01/02";
-        }
-        return LocalDate.parse(importedDate, DateTimeFormatter.ofPattern("yyyy/MM/dd"));
-    }
-
     private BaseReference createReference(final ArrayList<String[]> listPartLine) {
 
         String field = listPartLine.get(0)[0];
@@ -192,8 +160,7 @@ public class Import {
                     journal.setTitle(content);
                     break;
                 case "PY":
-                case "DA":
-                    journal.setDate(establishDate(content));
+                    journal.setYear(validateYear(content));
                     break;
                 case "N1":
                     journal.setNotes(content);
@@ -207,8 +174,11 @@ public class Import {
                 case "C7":
                     journal.setNumber(content);
                     break;
-                case "M2":
+                case "SP":
                     journal.setPages(content);
+                    break;
+                case "SN":
+                    journal.setIssn(content);
                     break;
                 default:
             }
@@ -239,11 +209,13 @@ public class Import {
                     book.setTitle(content);
                     break;
                 case "PY":
-                case "DA":
-                    book.setDate(establishDate(content));
+                    book.setYear(validateYear(content));
                     break;
                 case "N1":
                     book.setNotes(content);
+                    break;
+                case "NV":
+                    book.setNumber(content);
                     break;
                 case "PB":
                     book.setPublisher(content);
@@ -256,6 +228,9 @@ public class Import {
                     break;
                 case "AD":
                     book.setAddress(content);
+                    break;
+                case "SN":
+                    book.setIsbn(content);
                     break;
                 case "ET":
                     book.setEdition(content);
@@ -289,7 +264,7 @@ public class Import {
                     section.setTitle(content);
                     break;
                 case "PY":
-                    section.setDate(establishDate(content));
+                    section.setYear(validateYear(content));
                     break;
                 case "N1":
                     section.setNotes(content);
@@ -302,6 +277,12 @@ public class Import {
                     break;
                 case "T3":
                     section.setSeries(content);
+                    break;
+                case "IS":
+                    section.setNumber(content);
+                    break;
+                case "SN":
+                    section.setIsbn(content);
                     break;
                 case "AD":
                     section.setAddress(content);
@@ -338,8 +319,7 @@ public class Import {
                     thesis.setTitle(content);
                     break;
                 case "PY":
-                case "DA":
-                    thesis.setDate(establishDate(content));
+                    thesis.setYear(validateYear(content));
                     break;
                 case "N1":
                     thesis.setNotes(content);
@@ -348,7 +328,7 @@ public class Import {
                     thesis.setSchool(content);
                     break;
                 case "M3":
-                    thesis.setThesisType(content);
+                    thesis.setType(content);
                     break;
                 case "AD":
                     thesis.setAddress(content);
@@ -381,9 +361,8 @@ public class Import {
                 case "TI":
                     proceedings.setTitle(content);
                     break;
-                case "PY":
-                case "DA":
-                    proceedings.setDate(establishDate(content));
+                case "C2":
+                    proceedings.setYear(validateYear(content));
                     break;
                 case "N1":
                     proceedings.setNotes(content);
@@ -394,8 +373,14 @@ public class Import {
                 case "T3":
                     proceedings.setSeries(content);
                     break;
+                case "NV":
+                    proceedings.setNumber(content);
+                    break;
                 case "AD":
                     proceedings.setAddress(content);
+                    break;
+                case "PB":
+                    proceedings.setPublisher(content);
                     break;
                 default:
             }
@@ -423,8 +408,7 @@ public class Import {
                     paper.setTitle(content);
                     break;
                 case "PY":
-                case "DA":
-                    paper.setDate(establishDate(content));
+                    paper.setYear(validateYear(content));
                     break;
                 case "N1":
                     paper.setNotes(content);
@@ -463,16 +447,14 @@ public class Import {
                 case "TI":
                     webPage.setTitle(content);
                     break;
-                case "C2":
-                case "C1":
-                    webPage.setDate(establishDate(content));
+                case "PY":
+                    webPage.setYear(validateYear(content));
                     break;
                 case "N1":
                     webPage.setNotes(content);
                     break;
-                case "M1":
                 case "VL":
-                    webPage.setAccessDate(establishDate(content));
+                    webPage.setAccessYear(validateYear(content));
                     break;
                 case "UR":
                     webPage.setUrl(content);

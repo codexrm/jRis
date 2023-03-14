@@ -1,6 +1,5 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -15,7 +14,7 @@ public class ConferencePaper extends BaseReference {
     private final ArrayList<String> authorList;
     private final ArrayList<String> editorList;
     private String title;
-    private LocalDate date;
+    private String year;
     private String volume;
     private String publisher;
     private String address;
@@ -74,18 +73,18 @@ public class ConferencePaper extends BaseReference {
     public void setTitle(final String title) { this.title = title; }
 
     /**
-     * Gets the conferencePaper’s date.
+     * Gets the conferencePaper’s year.
      *
-     * @return the conferencePaper’s date.
+     * @return the conferencePaper’s year.
      */
-    public LocalDate getDate() { return date; }
+    public String getYear() { return year; }
 
     /**
-     * Sets the conferencePaper’s date.
+     * Sets the conferencePaper’s year.
      *
-     * @param date A LocalDate containing the conferencePaper’s date.
+     * @param year A String containing the conferencePaper’s year.
      */
-    public void setDate(final LocalDate date) { this.date = date; }
+    public void setYear(final String year) { this.year = year; }
 
     /**
      * Gets the conferencePaper’s volume.
