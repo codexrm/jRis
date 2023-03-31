@@ -14,16 +14,18 @@ public class BookSection extends BaseReference {
     private final ArrayList<String> authorList;
     private final ArrayList<String> editorList;
     private final ArrayList<String> seriesEditorList;
-    private String title;
     private String chapter;
-    private String year;
     private String pages;
-    private String series;
+    private String title;
     private String publisher;
+    private String year;
     private String volume;
+    private String number;
+    private String series;
+
     private String address;
     private String edition;
-    private String number;
+
     private String isbn;
 
 

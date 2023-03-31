@@ -12,9 +12,8 @@ import java.util.ArrayList;
 public class Export {
 
     private static final String TI = "TI  - ";
-    private static final String DA = "DA  - ";
     private static final String VL = "VL  - ";
-    private static final String AD = "AD  - ";
+    private static final String AD = "CY  - ";
     private static final String PB = "PB  - ";
     private static final String PY = "PY  - ";
 

@@ -19,7 +19,7 @@ PB  - Prencite Hall
 PY  - 2021
 VL  - 5
 NV  - 2
-AD  - New York
+CY  - New York
 ET  - 1
 SN  - 12396-8125
 T2  - LCDT
@@ -34,7 +34,7 @@ PB  - Educacion
 PY  - 2012
 IS  - 1
 VL  - 3
-AD  - Barcelona,España
+CY  - Barcelona,España
 ET  - 1
 T3  - JAS
 SE  - 2
@@ -48,7 +48,7 @@ TI  - Referencias Bibliograficas
 PB  - Universidad Agraria de La Habana
 PY  - 2019
 M3  - phd
-AD  - Mayabeque,Cuba
+CY  - Mayabeque,Cuba
 ER  - 
 TY  - CONF
 N1  - ee
@@ -61,7 +61,7 @@ VL  - 3
 PB  - Halt
 NV  - 1
 T3  - LKJ
-AD  - Guayaquil,Ecuador
+CY  - Guayaquil,Ecuador
 ER  - 
 TY  - CPAPER
 N1  - gg
@@ -71,7 +71,7 @@ TI  - Primeface
 PY  - 2021
 VL  - 1
 PB  - Palt
-AD  - Venecia,Italia
+CY  - Venecia,Italia
 SP  - 20
 ER  - 
 TY  - ELEC
