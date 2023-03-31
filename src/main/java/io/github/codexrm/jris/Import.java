@@ -82,7 +82,26 @@ public class Import {
         }
     }
 
-    private String validateYear(final String year) {
+    private String validateYear(String year) {
+
+        String[] years = year.split("--", 2);
+        String yearValidated = null;
+        if (years.length == 1) {
+            if (correctYear(year) != null) {
+                yearValidated = correctYear(year);
+
+            }
+        } else {
+            if (years.length == 2) {
+                if (correctYear(years[0]) != null && correctYear(years[1]) != null) {
+                    yearValidated = correctYear(years[0]) + "--" + correctYear(years[1]);
+                }
+            }
+        }
+        return yearValidated;
+    }
+
+    private String correctYear(final String year) {
 
         if (isNumber(year)) {
             final char[] charYear = year.toCharArray();
@@ -226,7 +245,7 @@ public class Import {
                 case "T2":
                     book.setSeries(content);
                     break;
-                case "AD":
+                case "CY":
                     book.setAddress(content);
                     break;
                 case "SN":
@@ -284,7 +303,7 @@ public class Import {
                 case "SN":
                     section.setIsbn(content);
                     break;
-                case "AD":
+                case "CY":
                     section.setAddress(content);
                     break;
                 case "ET":
@@ -330,7 +349,7 @@ public class Import {
                 case "M3":
                     thesis.setType(content);
                     break;
-                case "AD":
+                case "CY":
                     thesis.setAddress(content);
                     break;
                 default:
@@ -376,7 +395,7 @@ public class Import {
                 case "NV":
                     proceedings.setNumber(content);
                     break;
-                case "AD":
+                case "CY":
                     proceedings.setAddress(content);
                     break;
                 case "PB":
@@ -422,7 +441,7 @@ public class Import {
                 case "SP":
                     paper.setPages(content);
                     break;
-                case "AD":
+                case "CY":
                     paper.setAddress(content);
                     break;
                 default:

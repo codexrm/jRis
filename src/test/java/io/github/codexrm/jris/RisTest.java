@@ -125,7 +125,7 @@ class RisTest {
 
             final ArrayList<BaseReference> list = manager.importReferences(reader);
 
-            Assertions.assertEquals(5, list.size());
+            Assertions.assertEquals(7, list.size());
 
         } catch (final IOException e) {
             // TODO Auto-generated catch block

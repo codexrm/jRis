@@ -1,68 +1,80 @@
-uuuuuuu
-TY  - CONF
-A2  - Montaner,Luis
-TI  - The woman
-PY  - 202
-N1  - nn
-VL  - 6
-NV  - 5
-T3  - PLG
-AD  - Florencia,Colombia
-ER  - 
-TY  - GEN
-AU  - Torres-Nunnez,Roberto
-TI  - Photos
-DA  - 20/11
-N1  - ee
-PB  - NO SE
-AD  - ave45,no76
-ER  - 
-TY  - THES
-AU  - Dia,Marynes
-TI  - Reference
-PY  - 01
-N1  - jj
-PB  - Fructuoso Rodriguez
-M3  - Masters
-AD  - Mayabeque,Cuba
-ER  - 
-TY  - CHAP
-AU  - Gomez,Mario
-A2  - Borges,Juan
-A3  - Nuñez,Rolandi
-TI  - plan x
-PY  - 2019
-N1  - mm
-PB  - Education
-VL  - 1
-T3  - QWER
-AD  - Caracas,Venezuela
-ET  - 3
-SN  - 6985-4583
-SE  - 3
-SP  - 12
-ER  - 
-TY  - BOOK
-AU  - Borges,Juan
-A2  - Gil,Camilo
-TI  - Plan B
-PY  - 2018
-N1  - XX
-PB  - Prencite Hall
-VL  - 3
-T2  - MLD
-AD  - Quito,Ecuador
-ET  - 9
-ER  - 
 TY  - JOUR
-AU  - Gomez,Mario
-TI  - Complexity
-PY  - 2020
-N1  - zz
-JO  - Science
-VL  - 4
-C7  - 2
+N1  - aa
+AU  - Medina,Juan
+TI  - Proyecto de medio ambiente
+T2  - ciencia y educacion
+PY  - 2008
+VL  - 1
+C7  - 3
+SN  - 3842-4802
 SP  - 10
 ER  - 
-
-
+TY  - BOOK
+N1  - bb
+AU  - Navarro,Enrique
+AU  - Marin,Antonio
+A3  - Diaz,Mercedes
+TI  - Relacion de las carreras
+PB  - Prencite Hall
+PY  - 2020--2021
+VL  - 2
+NV  - First
+CY  - New York
+ET  - 2
+SN  - 5510-2031
+T2  - SLNS
+ER  - 
+TY  - CHAP
+N1  - cc
+AU  - Soler,Marco
+A2  - Ulloa,Alicia
+TI  - La educacion secundaria
+PB  - K.madriz
+PY  - 2019
+IS  - 1
+VL  - 5
+CY  - DF,Mexico
+ET  - 2
+T3  - SDN
+SE  - 6
+SN  - 3205-8104
+SP  - 30-50
+ER  - 
+TY  - THES
+N1  - ee
+AU  - Musa,Berta
+TI  - Imagenes
+PB  - Iberoamerica
+PY  - 2023
+M3  - phd
+CY  - Quito,Ecuador
+ER  - 
+TY  - CONF
+N1  - ff
+A2  - Gomez,Claudia
+TI  - Cambio Climatico
+C2  - 2020
+VL  - 5
+PB  - Airt
+NV  - 3
+T3  - LTD
+CY  - Bogota,Colombia
+ER  - 
+TY  - CPAPER
+N1  - gg
+AU  - Lopez,Beth
+A2  - Guerrero,Olivia
+TI  - Primefaces
+PY  - 2012
+VL  - 3
+PB  - Informatizacion
+CY  - Barcelona,EspaÃ±a
+SP  - 23,24
+ER  - 
+TY  - ELEC
+N1  - hh
+AU  - Alfonzo,Eric
+TI  - Java FX
+PY  - 2023
+UR  - https://JavaFX
+ER  - 
