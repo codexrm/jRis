@@ -32,7 +32,7 @@ class RisTest {
         article.setVolume("2");
         article.setNumber("3");
         article.setPages("10");
-        article.setIssn("333582-285452");
+        article.setIssn("1234-1234");
         article.setAuthor("Martin,Jacob");
         manager.addReference(article);
 

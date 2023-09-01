@@ -71,55 +71,6 @@ public class Import {
         }
     }
 
-    private boolean isNumber(final String number) {
-
-        try {
-            Long.valueOf(number);
-            return true;
-
-        } catch (final NumberFormatException e) {
-            return false;
-        }
-    }
-
-    private String validateYear(String year) {
-
-        String[] years = year.split("--", 2);
-        String yearValidated = null;
-        if (years.length == 1) {
-            if (correctYear(year) != null) {
-                yearValidated = correctYear(year);
-
-            }
-        } else {
-            if (years.length == 2) {
-                if (correctYear(years[0]) != null && correctYear(years[1]) != null) {
-                    yearValidated = correctYear(years[0]) + "--" + correctYear(years[1]);
-                }
-            }
-        }
-        return yearValidated;
-    }
-
-    private String correctYear(final String year) {
-
-        if (isNumber(year)) {
-            final char[] charYear = year.toCharArray();
-            switch (charYear.length) {
-                case 1:
-                    return "000" + year;
-                case 2:
-                    return "00" + year;
-                case 3:
-                    return "0" + year;
-                case 4:
-                    return year;
-                default:
-                    return null;
-            }
-        } else return null;
-    }
-
     private BaseReference createReference(final ArrayList<String[]> listPartLine) {
 
         String field = listPartLine.get(0)[0];
@@ -179,7 +130,7 @@ public class Import {
                     journal.setTitle(content);
                     break;
                 case "PY":
-                    journal.setYear(validateYear(content));
+                    journal.setYear(content);
                     break;
                 case "N1":
                     journal.setNotes(content);
@@ -228,7 +179,7 @@ public class Import {
                     book.setTitle(content);
                     break;
                 case "PY":
-                    book.setYear(validateYear(content));
+                    book.setYear(content);
                     break;
                 case "N1":
                     book.setNotes(content);
@@ -283,7 +234,7 @@ public class Import {
                     section.setTitle(content);
                     break;
                 case "PY":
-                    section.setYear(validateYear(content));
+                    section.setYear(content);
                     break;
                 case "N1":
                     section.setNotes(content);
@@ -338,7 +289,7 @@ public class Import {
                     thesis.setTitle(content);
                     break;
                 case "PY":
-                    thesis.setYear(validateYear(content));
+                    thesis.setYear(content);
                     break;
                 case "N1":
                     thesis.setNotes(content);
@@ -381,7 +332,7 @@ public class Import {
                     proceedings.setTitle(content);
                     break;
                 case "C2":
-                    proceedings.setYear(validateYear(content));
+                    proceedings.setYear(content);
                     break;
                 case "N1":
                     proceedings.setNotes(content);
@@ -427,7 +378,7 @@ public class Import {
                     paper.setTitle(content);
                     break;
                 case "PY":
-                    paper.setYear(validateYear(content));
+                    paper.setYear(content);
                     break;
                 case "N1":
                     paper.setNotes(content);
@@ -467,13 +418,13 @@ public class Import {
                     webPage.setTitle(content);
                     break;
                 case "PY":
-                    webPage.setYear(validateYear(content));
+                    webPage.setYear(content);
                     break;
                 case "N1":
                     webPage.setNotes(content);
                     break;
                 case "VL":
-                    webPage.setAccessYear(validateYear(content));
+                    webPage.setAccessYear(content);
                     break;
                 case "UR":
                     webPage.setUrl(content);

@@ -20,13 +20,13 @@
 -docencoding
 'UTF-8'
 -doctitle
-'jRis 1.3.0-SNAPSHOT API'
+'jRis 1.4.0-SNAPSHOT API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/mary/Documents/Proyecto/jRis/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'jRis 1.3.0-SNAPSHOT API'
+'jRis 1.4.0-SNAPSHOT API'
 io.github.codexrm.jris
 'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/BaseReference.java'
 'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Book.java'
@@ -41,22 +41,22 @@ io.github.codexrm.jris
 'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/WebPage.java'
 C:\Users\mary\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar = 1642268546000
 C:\Users\mary\Documents\Proyecto\jRis\src\main\java = 1677383353191
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses-index.html = 1680278534217
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses.html = 1680278534251
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allpackages-index.html = 1680278534229
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\constant-values.html = 1680278533935
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\deprecated-list.html = 1680278534247
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\element-list = 1680278533872
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\help-doc.html = 1680278534257
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index-all.html = 1680278534210
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index.html = 1680278534251
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.js = 1680278534191
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.zip = 1680278534206
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\overview-tree.html = 1680278534125
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.js = 1680278534167
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.zip = 1680278534176
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\script.js = 1680278534261
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\search.js = 1680278534265
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\stylesheet.css = 1680278534261
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.js = 1680278534181
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.zip = 1680278534185
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses-index.html = 1688776109535
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses.html = 1688776109688
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allpackages-index.html = 1688776109599
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\constant-values.html = 1688776109245
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\deprecated-list.html = 1688776109666
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\element-list = 1688776109194
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\help-doc.html = 1688776109724
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index-all.html = 1688776109488
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index.html = 1688776109690
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.js = 1688776109486
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.zip = 1688776109486
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\overview-tree.html = 1688776109416
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.js = 1688776109478
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.zip = 1688776109478
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\script.js = 1688776109746
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\search.js = 1688776109753
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\stylesheet.css = 1688776109726
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.js = 1688776109483
+C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.zip = 1688776109484

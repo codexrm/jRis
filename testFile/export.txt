@@ -6,7 +6,7 @@ T2  - Ciencia y educacion
 PY  - 2003
 VL  - 2
 C7  - 3
-SN  - 333582-285452
+SN  - 1234-1234
 SP  - 10
 ER  - 
 TY  - BOOK
