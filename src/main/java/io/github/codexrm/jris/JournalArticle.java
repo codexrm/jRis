@@ -3,11 +3,11 @@ package io.github.codexrm.jris;
 import java.util.ArrayList;
 
 /**
- * Represents an journalArticle Reference
+ * Represents a journalArticle Reference
  * Please see the {@link io.github.codexrm.jris.BaseReference}
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class JournalArticle extends BaseReference {
 
@@ -19,7 +19,6 @@ public class JournalArticle extends BaseReference {
     private String number;
     private String pages;
     private String issn;
-
 
     public JournalArticle() {
         super();

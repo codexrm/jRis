@@ -1,7 +1,6 @@
 package io.github.codexrm.jris;
 
 import lombok.NonNull;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
@@ -12,7 +11,7 @@ import java.util.ArrayList;
  * Represents the Manager class
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class RisManager {
 
@@ -50,7 +49,7 @@ public class RisManager {
      * Export reference list a Ris format
      *
      * @param path A String to identify the path to the file .
-     * @throws IOException
+     * @throws IOException if stream to file cannot be written to or closed.
      * @since 1.0
      */
     public void exportListReference(@NonNull final String path) throws IOException {
@@ -64,7 +63,7 @@ public class RisManager {
      *
      * @param reader responsible for reader to the file
      * @return list with all references imported.
-     * @throws IOException
+     * @throws IOException if stream to file cannot be written to or closed.
      * @since 1.0
      */
     public ArrayList<BaseReference> importReferences(@NonNull final Reader reader) throws IOException {

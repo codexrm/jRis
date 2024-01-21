@@ -3,11 +3,11 @@ package io.github.codexrm.jris;
 import java.util.ArrayList;
 
 /**
- * Represents an bookSection Reference
+ * Represents a bookSection Reference
  * Please see the {@link io.github.codexrm.jris.BaseReference}
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class BookSection extends BaseReference {
 
@@ -22,12 +22,9 @@ public class BookSection extends BaseReference {
     private String volume;
     private String number;
     private String series;
-
     private String address;
     private String edition;
-
     private String isbn;
-
 
     public BookSection() {
         super();

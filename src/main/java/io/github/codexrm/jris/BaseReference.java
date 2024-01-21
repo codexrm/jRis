@@ -1,10 +1,10 @@
 package io.github.codexrm.jris;
 
 /**
- * Represents an base reference
+ * Represents a base reference
  *
- * @author Marynes Diaz
- * @version 1.0
+ * @author Marynés Díaz
+ * @version 1.4.0
  */
 
 public class BaseReference {

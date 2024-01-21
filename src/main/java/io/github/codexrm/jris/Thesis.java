@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Please see the {@link io.github.codexrm.jris.BaseReference}
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class Thesis extends BaseReference {
 
