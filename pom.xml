@@ -65,15 +65,14 @@
 
     <scm>
         <url>https://github.com/codexrm/jRis</url>
-        <connection>scm:git:git://github.com/codexrm/jRis.git</connection>
-        <developerConnection>scm:git:ssh://github.com/codexrm/jRis.git</developerConnection>
+        <connection>scm:git:https://github.com/codexrm/jRis.git</connection>
+        <developerConnection>scm:git:https://github.com/codexrm/jRis.git</developerConnection>
     </scm>
 
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/codexrm/jRis</url>
+            <url>https://maven.pkg.github.com/codexrm/jris</url>
         </repository>
     </distributionManagement>
 
