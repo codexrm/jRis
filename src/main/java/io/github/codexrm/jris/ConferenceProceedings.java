@@ -1,14 +1,13 @@
 package io.github.codexrm.jris;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
- * Represents an conferenceProceedings Reference
+ * Represents a conferenceProceedings Reference
  * Please see the {@link io.github.codexrm.jris.BaseReference}
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class ConferenceProceedings extends BaseReference {
 

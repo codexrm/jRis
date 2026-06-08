@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Represents the class in charge of exporting the reference list to ris format
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class Export {
 
@@ -26,7 +26,7 @@ public class Export {
      *
      * @param listReference a list with all reference types to export
      * @param writer responsible for writing to the file
-     * @throws IOException
+     * @throws IOException if stream to file cannot be written to or closed.
      * @since 1.0
      */
     public void writeValue(final ArrayList<BaseReference> listReference, final Writer writer) throws IOException {

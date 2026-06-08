@@ -8,10 +8,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Represents the class in charge of importing the file en ris format
+ * Represents the class in charge of importing the file to ris format
  *
  * @author Marynes Diaz
- * @version 1.0
+ * @version 1.4.0
  */
 public class Import {
 
@@ -24,7 +24,7 @@ public class Import {
      *
      * @param reader responsible for reader to the file
      * @return list with all references imported.
-     * @throws IOException
+     * @throws IOException if stream to file cannot be written to or closed.
      * @since 1.0
      */
     public ArrayList<BaseReference> readReader(final Reader reader) throws IOException {
