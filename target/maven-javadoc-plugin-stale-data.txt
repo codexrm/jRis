@@ -1,62 +1,53 @@
+-J-Duser.language=
+-J-Duser.country=
 @options
 @packages
-@argfile
 -classpath
-'C:/Users/mary/.m2/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar'
+'C:/Users/Usuario/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar'
 -encoding
 'UTF-8'
 -protected
 -source
 '11'
 -sourcepath
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java'
+'C:/Users/Usuario/Desktop/CodexRM/jRis/src/main/java;C:/Users/Usuario/Desktop/CodexRM/jRis/target/generated-sources/annotations'
 -author
 -bottom
-'Copyright &#169; 2023. All rights reserved.'
+'Copyright &#169; 2026. All rights reserved.'
 -charset
 'UTF-8'
 -d
-'C:/Users/mary/Documents/Proyecto/jRis/target/apidocs'
+'C:/Users/Usuario/Desktop/CodexRM/jRis/target/reports/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
 'jRis 1.4.0-SNAPSHOT API'
 -linkoffline
-'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/mary/Documents/Proyecto/jRis/target/javadoc-bundle-options'
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/Usuario/Desktop/CodexRM/jRis/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
 'jRis 1.4.0-SNAPSHOT API'
 io.github.codexrm.jris
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/BaseReference.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Book.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/BookSection.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/ConferencePaper.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/ConferenceProceedings.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Export.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Import.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/JournalArticle.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/RisManager.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/Thesis.java'
-'C:/Users/mary/Documents/Proyecto/jRis/src/main/java/io/github/codexrm/jris/WebPage.java'
-C:\Users\mary\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar = 1642268546000
-C:\Users\mary\Documents\Proyecto\jRis\src\main\java = 1677383353191
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses-index.html = 1688776109535
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allclasses.html = 1688776109688
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\allpackages-index.html = 1688776109599
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\constant-values.html = 1688776109245
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\deprecated-list.html = 1688776109666
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\element-list = 1688776109194
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\help-doc.html = 1688776109724
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index-all.html = 1688776109488
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\index.html = 1688776109690
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.js = 1688776109486
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\member-search-index.zip = 1688776109486
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\overview-tree.html = 1688776109416
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.js = 1688776109478
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\package-search-index.zip = 1688776109478
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\script.js = 1688776109746
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\search.js = 1688776109753
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\stylesheet.css = 1688776109726
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.js = 1688776109483
-C:\Users\mary\Documents\Proyecto\jRis\target\apidocs\type-search-index.zip = 1688776109484
+C:\Users\Usuario\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar = 1772117995069
+C:\Users\Usuario\Desktop\CodexRM\jRis\src\main\java = 1770769012049
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\generated-sources\annotations = 1780668732130
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\allclasses-index.html = 1780668736759
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\allpackages-index.html = 1780668736761
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\copy.svg = 1780668736805
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\element-list = 1780668736685
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\help-doc.html = 1780668736799
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\index-all.html = 1780668736787
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\index.html = 1780668736792
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\link.svg = 1780668736807
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\member-search-index.js = 1780668736767
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\module-search-index.js = 1780668736763
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\overview-tree.html = 1780668736737
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\package-search-index.js = 1780668736765
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\script.js = 1780668736804
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\search-page.js = 1780668736812
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\search.html = 1780668736789
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\search.js = 1780668736810
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\stylesheet.css = 1780668736803
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\tag-search-index.js = 1780668736768
+C:\Users\Usuario\Desktop\CodexRM\jRis\target\reports\apidocs\type-search-index.js = 1780668736766

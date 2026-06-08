@@ -23,7 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f862d616-df68-4b93-b091-91a484f6c863" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFile/export.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testFile/export.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,22 +56,43 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="23bum3M04IGNZpBQggZYQg0tpuc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.jRis [clean].executor": "Run",
+    "Maven.jRis [install].executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "build/use-published-parent",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/CodexRM/jRis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="JUnit.RisTest.addReference">
     <configuration name="RisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jRis" />
@@ -106,7 +132,14 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,11 +168,14 @@
       <workItem from="1680286433712" duration="7000" />
       <workItem from="1682192491798" duration="618000" />
       <workItem from="1688772812973" duration="1416000" />
+      <workItem from="1693846108473" duration="306000" />
+      <workItem from="1772118281363" duration="1834000" />
+      <workItem from="1772548240221" duration="391000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -151,51 +187,12 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="388" height="466" key="DebuggerActiveHint" timestamp="1680278509836">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="388" height="466" key="DebuggerActiveHint/0.0.2560.1400@0.0.2560.1400" timestamp="1680278509836" />
-    <state width="2517" height="387" key="GridCell.Tab.0.bottom" timestamp="1688776157128">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="387" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1688776157128" />
-    <state width="2517" height="387" key="GridCell.Tab.0.center" timestamp="1688776157128">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="387" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1688776157128" />
-    <state width="2517" height="387" key="GridCell.Tab.0.left" timestamp="1688776157128">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="387" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1688776157128" />
-    <state width="2517" height="387" key="GridCell.Tab.0.right" timestamp="1688776157128">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="387" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1688776157128" />
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom" timestamp="1680286373703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1680286373703" />
-    <state width="2517" height="482" key="GridCell.Tab.1.center" timestamp="1680286373703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1680286373703" />
-    <state width="2517" height="482" key="GridCell.Tab.1.left" timestamp="1680286373703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1680286373703" />
-    <state width="2517" height="482" key="GridCell.Tab.1.right" timestamp="1680286373703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1680286373703" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jRis$RisTest.ic" NAME="RisTest Coverage Results" MODIFIED="1649700587801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/jRis$RisTest_addReference.ic" NAME="RisTest.addReference Coverage Results" MODIFIED="1688773232941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>io.github.codexrm.jris.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/jRis$RisTest_addReference.ic" NAME="RisTest.addReference Coverage Results" MODIFIED="1688773232941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/jRis$RisTest.ic" NAME="RisTest Coverage Results" MODIFIED="1649700587801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>io.github.codexrm.jris.*</FILTER>
     </SUITE>
   </component>
