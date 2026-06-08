@@ -34,7 +34,7 @@ PB  - Educacion
 PY  - 2012
 IS  - 1
 VL  - 3
-CY  - Barcelona,Espa§a
+CY  - Barcelona,Espa√±a
 ET  - 1
 T3  - JAS
 SE  - 2
