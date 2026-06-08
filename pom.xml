@@ -14,6 +14,7 @@
     </parent>
 
     <artifactId>jRis</artifactId>
+    <groupId>io.github.codexrm</groupId>
     <version>1.4.2</version>
     <packaging>jar</packaging>
 
