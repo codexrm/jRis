@@ -10,6 +10,7 @@
         <groupId>io.github.codexrm</groupId>
         <artifactId>codexrm</artifactId>
         <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>jRis</artifactId>
@@ -69,7 +70,7 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
+            <id>github-publish</id>
             <url>https://maven.pkg.github.com/codexrm/jRis</url>
         </repository>
     </distributionManagement>
