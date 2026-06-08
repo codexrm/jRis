@@ -38,7 +38,7 @@ jobs:
               <server>
                 <id>github-publish</id>
                 <username>${{ github.actor }}</username>
-                <password>${{ secrets.GITHUB_TOKEN }}</password>
+                <password>${{ secrets.READ_PACKAGES_TOKEN }}</password>
               </server>
             </servers>
           </settings>
