@@ -44,5 +44,8 @@ jobs:
           </settings>
           EOF
 
+      - name: Check Maven settings
+        run: cat ~/.m2/settings.xml
+
       - name: Build and Deploy to GitHub Packages
         run: mvn -B clean deploy -e
