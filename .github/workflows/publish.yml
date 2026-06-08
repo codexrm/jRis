@@ -45,4 +45,4 @@ jobs:
           EOF
 
       - name: Build and Deploy to GitHub Packages
-        run: mvn -B clean deploy
+        run: mvn -B clean deploy -e
