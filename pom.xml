@@ -13,7 +13,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>jRis</artifactId>
+    <artifactId>jris</artifactId>
     <groupId>io.github.codexrm</groupId>
     <version>1.4.2</version>
     <packaging>jar</packaging>
