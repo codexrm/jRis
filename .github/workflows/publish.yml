@@ -47,5 +47,13 @@ jobs:
       - name: Check Maven settings
         run: cat ~/.m2/settings.xml
 
+      - name: Test upload with curl
+        run: |
+            curl -v -X PUT \
+              -u "marynes0111:${{ secrets.READ_PACKAGES_TOKEN }}" \
+              -H "Content-Type: application/octet-stream" \
+              --data-binary "test" \
+              "https://maven.pkg.github.com/codexrm/jRis/io/github/codexrm/jRis/1.4.2/test.txt"
+
       - name: Build and Deploy to GitHub Packages
         run: mvn -B clean deploy -e
